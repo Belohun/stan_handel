@@ -21,7 +21,7 @@ jobs:
       - run: flutter config --enable-web
       - run: flutter pub get
       - run: flutter pub run easy_localization:generate --source-dir ./assets/translations -f keys -o local_keys.g.dart
-      - run: flutter build web --release --base-href "/"
+      - run: flutter build web --release --base-href "/stan_handel/"
       - run: |
           cd build/web
           git init
