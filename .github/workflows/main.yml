@@ -16,7 +16,8 @@ jobs:
         with:
           channel: 'stable'
           flutter-version: '3.3.4'
-      - run: flutter --version    
+      - run: flutter --version
+      - run: flutter clean
       - run: flutter config --enable-web
       - run: flutter pub get
       - run: flutter pub run easy_localization:generate --source-dir ./assets/translations -f keys -o local_keys.g.dart
