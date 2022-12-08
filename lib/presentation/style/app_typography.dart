@@ -119,9 +119,16 @@ class AppTypography {
     fontWeight: FontWeight.w400,
   );
 
+  static const body1w300 = TextStyle(
+    fontSize: 20,
+    height: 1.2,
+    fontFamily: fontFamily,
+    fontWeight: FontWeight.w300,
+  );
+
   static const body1w500 = TextStyle(
-    fontSize: 17,
-    height: 1.4,
+    fontSize: 20,
+    height: 1.2,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w500,
   );

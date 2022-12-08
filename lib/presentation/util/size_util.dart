@@ -4,10 +4,7 @@ import 'package:stan_handel_web/presentation/style/screen_size.dart';
 
 extension ScreenSizeContexExtension on BuildContext {
   ScreenSize get screenSize {
-    final screenWidth = MediaQuery
-        .of(this)
-        .size
-        .width;
+    final screenWidth = MediaQuery.of(this).size.width;
 
     if (screenWidth >= 1200) {
       return ScreenSize.xl;
@@ -24,10 +21,7 @@ extension ScreenSizeContexExtension on BuildContext {
 
   double get contentWidth {
     final currentScreenSize = screenSize;
-    final mediaSize = MediaQuery
-        .of(this)
-        .size
-        .width;
+    final mediaSize = MediaQuery.of(this).size.width;
     switch (currentScreenSize) {
       case ScreenSize.xs:
       case ScreenSize.s:
@@ -54,6 +48,13 @@ extension ScreenSizeContexExtension on BuildContext {
     return 600;
   }
 
+  double get mapHeight {
+    if (isScreenSmall) {
+      return 400;
+    }
+    return contentHeight;
+  }
+
   double get textContentWidth {
     if (isScreenSmall) return contentWidth;
 
@@ -69,7 +70,5 @@ extension ScreenSizeContexExtension on BuildContext {
       default:
         return AppTypography.appTitle;
     }
-
   }
 }
-

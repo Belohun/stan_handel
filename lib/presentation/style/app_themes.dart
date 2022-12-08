@@ -11,6 +11,7 @@ class AppThemes {
     scrollbarTheme: const ScrollbarThemeData(
       trackColor: MaterialStatePropertyAll(Colors.white),
       thumbColor: MaterialStatePropertyAll(AppColors.gray5),
+      thickness: MaterialStatePropertyAll(8)
     ),
   );
 }
