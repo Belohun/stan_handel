@@ -438,7 +438,7 @@ class _ImageSectionSmall extends StatelessWidget {
             color: Colors.black.withOpacity(0.50),
             colorBlendMode: BlendMode.srcOver,
             fit: BoxFit.cover,
-            image: const AssetImage(Images.steelSheets),
+            image: const AssetImage(Images.steelSheetsSmall),
           ),
         ),
         Center(
