@@ -13,6 +13,7 @@ class StanHandelApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
+      initialRoute: '/',
       routes: {
         '/': (context) => const MainPage(),
       },

@@ -9,6 +9,9 @@ class Images {
 
   static const steelSheets = "${path}steel_sheets.jpg";
 
+  static const steelSheetsSmall = "${path}steel_sheets_small.jpg";
+
+
   static const pipes = "${path}pipes.jpeg";
 
   static const shakeHands = "${path}shake_hands.jpg";
