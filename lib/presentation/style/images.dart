@@ -9,8 +9,7 @@ class Images {
 
   static const steelSheets = "${path}steel_sheets.jpg";
 
-  static const steelSheetsSmall = "${path}steel_sheets_small.jpg";
-
+  static const steelSheetsSmall = "${path}steel_sheets_small.webp";
 
   static const pipes = "${path}pipes.jpeg";
 
