@@ -5,6 +5,7 @@ enum HomePageTabEnum {
   sheetMetal,
   rods,
   pipes,
+  calculator,
   other,
   contact,
 }
@@ -22,6 +23,8 @@ extension HomePageTabEnumExtension on HomePageTabEnum {
         return LocaleKeys.home_page_navigation_rest.tr();
       case HomePageTabEnum.contact:
         return LocaleKeys.home_page_navigation_contact.tr();
+      case HomePageTabEnum.calculator:
+        return LocaleKeys.home_page_navigation_calculator.tr();
     }
   }
 }

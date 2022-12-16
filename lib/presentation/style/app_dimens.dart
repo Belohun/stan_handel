@@ -60,4 +60,6 @@ class AppDimens {
 
   static const primaryButtonRadius = 100.0;
 
+  static const iconTransitionDuration = Duration(milliseconds: 200);
+
 }
