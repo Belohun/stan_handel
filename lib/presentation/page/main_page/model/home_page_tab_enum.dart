@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:stan_handel_web/generated/local_keys.g.dart';
+import 'package:stan_handel_web/presentation/page/main_page/model/tab_menu_item_enum.dart';
 
 enum HomePageTabEnum {
   sheetMetal,
@@ -25,6 +26,21 @@ extension HomePageTabEnumExtension on HomePageTabEnum {
         return LocaleKeys.home_page_navigation_contact.tr();
       case HomePageTabEnum.calculator:
         return LocaleKeys.home_page_navigation_calculator.tr();
+    }
+  }
+
+  List<TabMenuEnumBase> get menuTabItems {
+    switch (this) {
+      case HomePageTabEnum.sheetMetal:
+        return TabMenuSheetMetal.values;
+      case HomePageTabEnum.rods:
+        return TabMenuRods.values;
+      case HomePageTabEnum.pipes:
+        return TabMenuPipes.values;
+      case HomePageTabEnum.calculator:
+      case HomePageTabEnum.other:
+      case HomePageTabEnum.contact:
+        return [];
     }
   }
 }

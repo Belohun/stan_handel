@@ -74,6 +74,8 @@ class _NavigationButton extends HookWidget {
         splashColor: Colors.white,
         hoverColor: Colors.white,
         onHover: (isHovered) {
+
+
           hoverState.value = isHovered;
         },
         onTap: () {},
