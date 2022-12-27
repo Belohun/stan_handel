@@ -5,6 +5,3 @@ enum ScreenSize {
   l,
   xl,
 }
-
-
-
