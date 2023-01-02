@@ -47,7 +47,7 @@ class _NavigationButtons extends StatelessWidget {
           children: HomePageTabEnum.values
               .map(
                 (e) => _NavigationButton(
-                  name: e.name,
+                  tab: e,
                 ),
               )
               .toList(),
@@ -58,40 +58,56 @@ class _NavigationButtons extends StatelessWidget {
 
 class _NavigationButton extends HookWidget {
   const _NavigationButton({
-    required this.name,
+    required this.tab,
     Key? key,
   }) : super(key: key);
 
-  final String name;
+  final HomePageTabEnum tab;
 
   @override
   Widget build(BuildContext context) {
     final hoverState = useState(false);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: AppDimens.m).copyWith(left: AppDimens.xl),
-      child: InkWell(
-        splashColor: Colors.white,
-        hoverColor: Colors.white,
-        onHover: (isHovered) {
+      padding: const EdgeInsets.symmetric(vertical: AppDimens.m)
+          .copyWith(left: AppDimens.xl),
+      child: MouseRegion(
 
-
-          hoverState.value = isHovered;
+        onEnter: (_) {
+          hoverState.value = true;
         },
-        onTap: () {},
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            SeoText(
-              name,
-              style: AppTypography.h3w400.copyWith(
-                shadows: [const Shadow(color: Colors.black, offset: Offset(0, -5))],
-                color: Colors.transparent,
-                decoration: hoverState.value ? TextDecoration.underline : null,
-                decorationColor: AppColors.primary,
-              ),
+        onExit: (_) {
+          hoverState.value = false;
+        },
+        child: PortalTarget(
+          visible: hoverState.value,
+          anchor: const Aligned(
+            follower: Alignment.topCenter,
+            target: Alignment.bottomCenter,
+          ),
+          portalFollower: Container(
+            color: Colors.white,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: tab.menuTabItems
+                  .map((e) => SeoText(
+                        TabMenuUtils.getName(e),
+                        style: AppTypography.h3w400,
+                      ))
+                  .toList(),
             ),
-          ],
+          ),
+          child: SeoText(
+            tab.name,
+            style: AppTypography.h3w400.copyWith(
+              shadows: [
+                const Shadow(color: Colors.black, offset: Offset(0, -5))
+              ],
+              color: Colors.transparent,
+              decoration: hoverState.value ? TextDecoration.underline : null,
+              decorationColor: AppColors.primary,
+            ),
+          ),
         ),
       ),
     );

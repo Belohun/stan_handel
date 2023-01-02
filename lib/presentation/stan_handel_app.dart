@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_portal/flutter_portal.dart';
 import 'package:stan_handel_web/presentation/page/main_page/main_page.dart';
 import 'package:stan_handel_web/presentation/style/app_themes.dart';
 
@@ -8,15 +9,17 @@ class StanHandelApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: AppThemes.lightStyle,
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const MainPage(),
-      },
+    return Portal(
+      child: MaterialApp(
+        theme: AppThemes.lightStyle,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const MainPage(),
+        },
+      ),
     );
   }
 }
