@@ -37,7 +37,6 @@ class PrimaryButton extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-
             const SizedBox(width: AppDimens.xl),
             const Icon(Icons.arrow_right_alt_rounded),
           ],

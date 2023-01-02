@@ -62,4 +62,5 @@ class AppDimens {
 
   static const iconTransitionDuration = Duration(milliseconds: 200);
 
+  static const textUnderlineDuration = Duration(milliseconds: 150);
 }

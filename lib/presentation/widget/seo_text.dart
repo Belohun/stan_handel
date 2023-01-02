@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
+import 'package:stan_handel_web/presentation/style/app_dimens.dart';
+import 'package:stan_handel_web/presentation/style/app_typography.dart';
 
 class SeoText extends StatelessWidget {
   const SeoText(
@@ -18,11 +20,15 @@ class SeoText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextRenderer(
-      child: Text(
-        text,
-        style: style,
-        textAlign: textAlign,
-        maxLines: maxLines,
+      child: AnimatedDefaultTextStyle(
+        curve: Curves.bounceIn,
+        style: style ?? AppTypography.body1,
+        duration: AppDimens.iconTransitionDuration,
+        child: Text(
+          text,
+          textAlign: textAlign,
+          maxLines: maxLines,
+        ),
       ),
     );
   }
