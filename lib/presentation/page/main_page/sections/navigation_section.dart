@@ -26,10 +26,18 @@ class _NavigationSection extends StatelessWidget {
   }
 }
 
-class _NavigationButtons extends StatelessWidget {
+class _NavigationButtons extends StatefulWidget {
   const _NavigationButtons({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<_NavigationButtons> createState() => _NavigationButtonsState();
+}
+
+class _NavigationButtonsState extends State<_NavigationButtons> with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation<double> animation;
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +45,22 @@ class _NavigationButtons extends StatelessWidget {
       case ScreenSize.xs:
       case ScreenSize.s:
       case ScreenSize.m:
-        return const Padding(
-          padding: EdgeInsets.only(right: AppDimens.xl),
-          child: Icon(Icons.menu),
+        return Padding(
+          padding: const EdgeInsets.only(right: AppDimens.xl),
+          child: CupertinoButton(
+            padding: EdgeInsets.zero,
+            onPressed: () {
+              if (controller.value == 0) {
+                controller.forward(from: 0);
+              } else if (controller.value == 1) {
+                controller.reverse(from: 1);
+              }
+            },
+            child: AnimatedIcon(
+              icon: AnimatedIcons.menu_close,
+              progress: animation,
+            ),
+          ),
         );
 
       default:
@@ -53,6 +74,24 @@ class _NavigationButtons extends StatelessWidget {
               .toList(),
         );
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = AnimationController(
+      vsync: this,
+      duration: AppDimens.textUnderlineDuration,
+    );
+    animation = Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: controller, curve: Curves.easeOut));
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+
+    controller.dispose();
   }
 }
 
