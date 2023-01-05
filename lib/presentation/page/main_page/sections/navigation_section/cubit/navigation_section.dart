@@ -51,7 +51,7 @@ class _NavigationMenu extends StatefulHookWidget {
 
 class _NavigationMenuState extends State<_NavigationMenu> with SingleTickerProviderStateMixin {
   late AnimationController controller;
-  late Animation<Offset> animation;
+  late Animation<double> animation;
 
   @override
   Widget build(BuildContext context) {
@@ -66,15 +66,12 @@ class _NavigationMenuState extends State<_NavigationMenu> with SingleTickerProvi
 
     return SizedBox(
       width: double.infinity,
-      child: SlideTransition(
-        position: animation,
+      child: SizeTransition(
+        sizeFactor: animation,
         child: Container(
           width: double.infinity,
           color: AppColors.primaryDark,
-          child: Column(children: const [
-            Text("Test"),
-            SizedBox(height: 500,)
-          ]),
+          child: const _NavigationMenuContent(),
         ),
       ),
     );
@@ -87,7 +84,7 @@ class _NavigationMenuState extends State<_NavigationMenu> with SingleTickerProvi
       vsync: this,
       duration: const Duration(milliseconds: 200),
     );
-    animation = Tween(begin: const Offset(0, 1), end: Offset.zero).animate(
+    animation = Tween(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(
         parent: controller,
         curve: Curves.easeIn,
@@ -99,6 +96,124 @@ class _NavigationMenuState extends State<_NavigationMenu> with SingleTickerProvi
   void dispose() {
     super.dispose();
     controller.dispose();
+  }
+}
+
+class _NavigationMenuContent extends StatelessWidget {
+  const _NavigationMenuContent({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: HomePageTabEnum.values.map((e) => _NavigationMenuItem(tab: e)).toList());
+  }
+}
+
+class _NavigationMenuItem extends StatefulHookWidget {
+  const _NavigationMenuItem({
+    required this.tab,
+    Key? key,
+  }) : super(key: key);
+
+  final HomePageTabEnum tab;
+
+  @override
+  State<_NavigationMenuItem> createState() => _NavigationMenuItemState();
+}
+
+class _NavigationMenuItemState extends State<_NavigationMenuItem> with SingleTickerProviderStateMixin {
+  @override
+  Widget build(BuildContext context) {
+    final isExtended = useState(false);
+
+    final animationController = useAnimationController(
+      duration: AppDimens.iconTransitionDuration,
+      vsync: this,
+    );
+
+    final Animation<double> subMenuAnimation = useMemoized(
+      () {
+        return Tween<double>(begin: 0, end: 1).animate(animationController);
+      },
+      [context],
+    );
+    final Animation<double> iconAnimation = useMemoized(
+      () {
+        return Tween<double>(begin: 0, end: 0.5).animate(animationController);
+      },
+      [context],
+    );
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(AppDimens.m),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                widget.tab.name,
+                style: AppTypography.xl.copyWith(color: Colors.white),
+              ),
+              if (widget.tab.menuTabItems.isNotEmpty) ...[
+                const VerticalDivider(
+                  color: Colors.white,
+                  width: 1.5,
+                ),
+                CupertinoButton(
+                  padding: EdgeInsets.zero,
+                  onPressed: () {
+                    if (isExtended.value) {
+                      animationController.reverse();
+                    } else {
+                      animationController.forward();
+                    }
+                    isExtended.value = !isExtended.value;
+                  },
+                  child: RotationTransition(
+                    turns: iconAnimation,
+                    child: const Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.white,
+                    ),
+                  ),
+                )
+              ],
+            ],
+          ),
+        ),
+        ...widget.tab.menuTabItems.map((e) => SizeTransition(
+              sizeFactor: subMenuAnimation,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppDimens.l,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Divider(color: Colors.white, height: 0.75),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: AppDimens.m,
+                      ),
+                      child: Text(
+                        e.name,
+                        style: AppTypography.xl.copyWith(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )),
+        const Divider(
+          color: Colors.white,
+          height: 0.75,
+        ),
+      ],
+    );
   }
 }
 
