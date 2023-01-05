@@ -1,80 +1,155 @@
-part of '../main_page.dart';
+part of '../../../main_page.dart';
 
-class _NavigationSection extends StatelessWidget {
+class _NavigationSection extends HookWidget {
   const _NavigationSection({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(
-        width: context.isScreenSmall ? double.infinity : context.contentWidth,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            Image(
-              alignment: Alignment.centerLeft,
-              image: AssetImage(Images.logoSmall),
+    final cubit = useBloc<NavigationSectionCubit>();
+    final state = useBlocBuilder(cubit);
+
+    return Column(
+      children: [
+        Center(
+          child: SizedBox(
+            width: context.isScreenSmall ? double.infinity : context.contentWidth,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Image(
+                  alignment: Alignment.centerLeft,
+                  image: AssetImage(Images.logoSmall),
+                ),
+                _NavigationButtons(
+                  cubit: cubit,
+                  state: state,
+                ),
+              ],
             ),
-            _NavigationButtons(),
-          ],
+          ),
         ),
-      ),
+        context.showNavigationMenu ? _NavigationMenu(state: state) : const SizedBox.shrink()
+      ],
     );
   }
 }
 
-class _NavigationButtons extends StatefulWidget {
-  const _NavigationButtons({
+class _NavigationMenu extends StatefulHookWidget {
+  const _NavigationMenu({
+    required this.state,
     Key? key,
   }) : super(key: key);
 
+  final NavigationSectionState state;
+
   @override
-  State<_NavigationButtons> createState() => _NavigationButtonsState();
+  State<_NavigationMenu> createState() => _NavigationMenuState();
 }
 
-class _NavigationButtonsState extends State<_NavigationButtons> with SingleTickerProviderStateMixin {
+class _NavigationMenuState extends State<_NavigationMenu> with SingleTickerProviderStateMixin {
   late AnimationController controller;
-  late Animation<double> animation;
+  late Animation<Offset> animation;
 
   @override
   Widget build(BuildContext context) {
-    switch (context.screenSize) {
-      case ScreenSize.xs:
-      case ScreenSize.s:
-      case ScreenSize.m:
-        return Padding(
-          padding: const EdgeInsets.only(right: AppDimens.xl),
-          child: CupertinoButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              if (controller.value == 0) {
-                controller.forward(from: 0);
-              } else if (controller.value == 1) {
-                controller.reverse(from: 1);
-              }
-            },
-            child: AnimatedIcon(
-              icon: AnimatedIcons.menu_close,
-              progress: animation,
-            ),
-          ),
-        );
+    useEffect(() {
+      if (widget.state.isNavigationMenuOpened) {
+        controller.forward(from: 0);
+      } else if (!widget.state.isNavigationMenuOpened) {
+        controller.reverse(from: 1);
+      }
+      return null;
+    }, [widget.state]);
 
-      default:
-        return Row(
-          children: HomePageTabEnum.values
-              .map(
-                (e) => _NavigationButton(
-                  tab: e,
-                ),
-              )
-              .toList(),
-        );
-    }
+    return SizedBox(
+      width: double.infinity,
+      child: SlideTransition(
+        position: animation,
+        child: Container(
+          width: double.infinity,
+          color: AppColors.primaryDark,
+          child: Column(children: const [
+            Text("Test"),
+            SizedBox(height: 500,)
+          ]),
+        ),
+      ),
+    );
   }
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 200),
+    );
+    animation = Tween(begin: const Offset(0, 1), end: Offset.zero).animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: Curves.easeIn,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+  }
+}
+
+class _NavigationButtons extends StatelessWidget {
+  const _NavigationButtons({
+    required this.cubit,
+    required this.state,
+    Key? key,
+  }) : super(key: key);
+
+  final NavigationSectionCubit cubit;
+  final NavigationSectionState state;
+
+  @override
+  Widget build(BuildContext context) {
+    if (context.showNavigationMenu) {
+      return _NavigationMenuIcon(
+        cubit: cubit,
+        state: state,
+      );
+    }
+
+    return Row(
+      children: HomePageTabEnum.values
+          .map(
+            (e) => _NavigationButton(
+              tab: e,
+            ),
+          )
+          .toList(),
+    );
+  }
+}
+
+class _NavigationMenuIcon extends StatefulHookWidget {
+  const _NavigationMenuIcon({
+    required this.state,
+    required this.cubit,
+    Key? key,
+  }) : super(key: key);
+
+  final NavigationSectionCubit cubit;
+  final NavigationSectionState state;
+
+  @override
+  State<_NavigationMenuIcon> createState() => _NavigationMenuIconState();
+}
+
+class _NavigationMenuIconState extends State<_NavigationMenuIcon> with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation<double> animation;
 
   @override
   void initState() {
@@ -84,7 +159,12 @@ class _NavigationButtonsState extends State<_NavigationButtons> with SingleTicke
       vsync: this,
       duration: AppDimens.textUnderlineDuration,
     );
-    animation = Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: controller, curve: Curves.easeOut));
+    animation = Tween(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: Curves.ease,
+      ),
+    );
   }
 
   @override
@@ -92,6 +172,35 @@ class _NavigationButtonsState extends State<_NavigationButtons> with SingleTicke
     super.dispose();
 
     controller.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    useEffect(() {
+      if (widget.state.isNavigationMenuOpened) {
+        controller.forward(from: 0);
+      } else if (!widget.state.isNavigationMenuOpened) {
+        controller.reverse(from: 1);
+      }
+      return null;
+    }, [widget.state]);
+
+    return CupertinoButton(
+      padding: const EdgeInsets.only(right: AppDimens.xl),
+      onPressed: () {
+        if (controller.value == 0) {
+          widget.cubit.changeNavigationMenuState(true);
+        } else if (controller.value == 1) {
+          widget.cubit.changeNavigationMenuState(false);
+        }
+      },
+      child: AnimatedIcon(
+        color: AppColors.primaryDark,
+        size: AppDimens.iconSize,
+        icon: AnimatedIcons.menu_close,
+        progress: animation,
+      ),
+    );
   }
 }
 
@@ -284,5 +393,19 @@ class _SubMenuItem extends HookWidget {
         ),
       ),
     );
+  }
+}
+
+extension on BuildContext {
+  bool get showNavigationMenu {
+    switch (screenSize) {
+      case ScreenSize.xs:
+      case ScreenSize.s:
+      case ScreenSize.m:
+        return true;
+
+      default:
+        return false;
+    }
   }
 }

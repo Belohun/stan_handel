@@ -44,6 +44,7 @@ extension ScreenSizeContexExtension on BuildContext {
     }
   }
 
+
   double get contentHeight {
     return 600;
   }
