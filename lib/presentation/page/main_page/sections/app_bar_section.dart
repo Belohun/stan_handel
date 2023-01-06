@@ -20,7 +20,7 @@ class _AppBarSection extends HookWidget {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-                const Spacer(),
+              const Spacer(),
               _LanguageMenu(currentLang: currentLang),
             ],
           ),

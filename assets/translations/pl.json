@@ -6,7 +6,27 @@
       "pipes": "Rury",
       "contact": "Kontakt",
       "rest": "Pozostałe",
-      "calculator": "Kalkulator"
+      "calculator": "Kalkulator",
+      "sub_menu": {
+        "sheet_metal": {
+          "hotRolled": "Blacha gorącowalcowana",
+          "galvanized": "Blacha ocynkowana",
+          "checkerPlate": "Blacha ryflowana",
+          "coldRolled": "Blacha zimnowalcowana"
+        },
+        "rods": {
+          "round": "Pręty okrągłe"
+        },
+        "pipes": {
+          "steel": "Rury Stalowe",
+          "seamless": "Rury bezszwowe",
+          "seamed": "Rury ze szwem"
+        },
+        "others": {
+          "closed_profiles": "Profile zamknięte",
+          "steel_angle_bars": "Stalowe kątowniki"
+        }
+      }
     },
     "image_section": {
       "header": "Stan Handel - sprzedaż hurtowa i detaliczna",
@@ -14,9 +34,9 @@
       "button_text": "Znajdź nas na mapie"
     },
     "satisfaction_section": {
-      "header" : "Gwarancja satysfakcji",
-      "content_p1" : "Każdego klienta traktujemy z zaangażowaniem, dostosowując się do indywidualnych potrzeb. Staramy się udzielać fachowych porad, pomagając w wyborze odpowiednich produktów.",
-      "content_p2" : "Oferujemy szeroki asortyment towarów zarówno w I (atestowanym) jak i II gatunku, dzięki czemu możemy zaproponować najkorzystniejsze rozwiązania, dostosowując się do potrzeb naszych kontrahentów. Umożliwiamy negocjowanie cen, co sprawia, że oferta jest zawsze atrakcyjna oraz na miarę. Wynosimy handel hurtowy i detaliczny wyrobów hutniczych na nowy, wyższy poziom. Warto poznać wszystkie nasze produkty."
+      "header": "Gwarancja satysfakcji",
+      "content_p1": "Każdego klienta traktujemy z zaangażowaniem, dostosowując się do indywidualnych potrzeb. Staramy się udzielać fachowych porad, pomagając w wyborze odpowiednich produktów.",
+      "content_p2": "Oferujemy szeroki asortyment towarów zarówno w I (atestowanym) jak i II gatunku, dzięki czemu możemy zaproponować najkorzystniejsze rozwiązania, dostosowując się do potrzeb naszych kontrahentów. Umożliwiamy negocjowanie cen, co sprawia, że oferta jest zawsze atrakcyjna oraz na miarę. Wynosimy handel hurtowy i detaliczny wyrobów hutniczych na nowy, wyższy poziom. Warto poznać wszystkie nasze produkty."
     }
   }
 }

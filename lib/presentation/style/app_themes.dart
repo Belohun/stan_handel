@@ -9,9 +9,8 @@ class AppThemes {
     primaryColor: AppColors.primary,
     fontFamily: AppTypography.fontFamily,
     scrollbarTheme: const ScrollbarThemeData(
-      trackColor: MaterialStatePropertyAll(Colors.white),
-      thumbColor: MaterialStatePropertyAll(AppColors.gray5),
-      thickness: MaterialStatePropertyAll(8)
-    ),
+        trackColor: MaterialStatePropertyAll(Colors.white),
+        thumbColor: MaterialStatePropertyAll(AppColors.gray5),
+        thickness: MaterialStatePropertyAll(8)),
   );
 }

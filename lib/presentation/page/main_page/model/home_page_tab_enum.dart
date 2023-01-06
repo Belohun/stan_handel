@@ -6,8 +6,8 @@ enum HomePageTabEnum {
   sheetMetal,
   rods,
   pipes,
-  calculator,
   other,
+  calculator,
   contact,
 }
 
@@ -37,8 +37,10 @@ extension HomePageTabEnumExtension on HomePageTabEnum {
         return TabMenuRods.values;
       case HomePageTabEnum.pipes:
         return TabMenuPipes.values;
-      case HomePageTabEnum.calculator:
       case HomePageTabEnum.other:
+        return TabMenuOthers.values;
+
+      case HomePageTabEnum.calculator:
       case HomePageTabEnum.contact:
         return [];
     }
