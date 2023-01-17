@@ -1,4 +1,4 @@
-part of '../../../main_page.dart';
+part of '../../main_page.dart';
 
 class _NavigationSection extends HookWidget {
   const _NavigationSection({
@@ -14,7 +14,8 @@ class _NavigationSection extends HookWidget {
       children: [
         Center(
           child: SizedBox(
-            width: context.isScreenSmall ? double.infinity : context.contentWidth,
+            width:
+                context.isScreenSmall ? double.infinity : context.contentWidth,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,7 +32,9 @@ class _NavigationSection extends HookWidget {
             ),
           ),
         ),
-        context.showNavigationMenu ? _NavigationMenu(state: state) : const SizedBox.shrink()
+        context.showNavigationMenu
+            ? _NavigationMenu(state: state)
+            : const SizedBox.shrink()
       ],
     );
   }
@@ -49,7 +52,8 @@ class _NavigationMenu extends StatefulHookWidget {
   State<_NavigationMenu> createState() => _NavigationMenuState();
 }
 
-class _NavigationMenuState extends State<_NavigationMenu> with SingleTickerProviderStateMixin {
+class _NavigationMenuState extends State<_NavigationMenu>
+    with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animation;
 
@@ -107,8 +111,11 @@ class _NavigationMenuContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: HomePageTabEnum.values.map((e) => _NavigationMenuItem(tab: e)).toList());
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: HomePageTabEnum.values
+          .map((e) => _NavigationMenuItem(tab: e))
+          .toList(),
+    );
   }
 }
 
@@ -124,7 +131,8 @@ class _NavigationMenuItem extends StatefulHookWidget {
   State<_NavigationMenuItem> createState() => _NavigationMenuItemState();
 }
 
-class _NavigationMenuItemState extends State<_NavigationMenuItem> with SingleTickerProviderStateMixin {
+class _NavigationMenuItemState extends State<_NavigationMenuItem>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final isExtended = useState(false);
@@ -154,15 +162,16 @@ class _NavigationMenuItemState extends State<_NavigationMenuItem> with SingleTic
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                widget.tab.name,
+              HoverOnButton(
+                padding: EdgeInsets.zero,
+                text: widget.tab.name,
                 style: AppTypography.xl.copyWith(color: Colors.white),
+                underlineColor: Colors.white,
+                onPressed: () {
+                  //TODO
+                },
               ),
               if (widget.tab.menuTabItems.isNotEmpty) ...[
-                const VerticalDivider(
-                  color: Colors.white,
-                  width: 1.5,
-                ),
                 CupertinoButton(
                   padding: EdgeInsets.zero,
                   onPressed: () {
@@ -194,15 +203,16 @@ class _NavigationMenuItemState extends State<_NavigationMenuItem> with SingleTic
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Divider(color: Colors.white, height: 0.75),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: AppDimens.m,
-                      ),
-                      child: Text(
-                        e.name,
-                        style: AppTypography.xl.copyWith(color: Colors.white),
-                      ),
+                    const Divider(color: Colors.white, height: 0.75),
+                    HoverOnButton(
+                      padding:
+                          const EdgeInsets.symmetric(vertical: AppDimens.m),
+                      text: e.name,
+                      style: AppTypography.xl.copyWith(color: Colors.white),
+                      underlineColor: Colors.white,
+                      onPressed: () {
+                        //TODO
+                      },
                     ),
                   ],
                 ),
@@ -239,8 +249,10 @@ class _NavigationButtons extends StatelessWidget {
     return Row(
       children: HomePageTabEnum.values
           .map(
-            (e) => _NavigationButton(
-              tab: e,
+            (e) => HoverOnButton(
+              text: e.name,
+              onPressed: () {},
+              portalTarget: _SubMenu(tab: e),
             ),
           )
           .toList(),
@@ -262,7 +274,8 @@ class _NavigationMenuIcon extends StatefulHookWidget {
   State<_NavigationMenuIcon> createState() => _NavigationMenuIconState();
 }
 
-class _NavigationMenuIconState extends State<_NavigationMenuIcon> with SingleTickerProviderStateMixin {
+class _NavigationMenuIconState extends State<_NavigationMenuIcon>
+    with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animation;
 
@@ -319,107 +332,6 @@ class _NavigationMenuIconState extends State<_NavigationMenuIcon> with SingleTic
   }
 }
 
-class _NavigationButton extends StatefulHookWidget {
-  const _NavigationButton({
-    required this.tab,
-    Key? key,
-  }) : super(key: key);
-
-  final HomePageTabEnum tab;
-
-  @override
-  State<_NavigationButton> createState() => _NavigationButtonState();
-}
-
-class _NavigationButtonState extends State<_NavigationButton> with TickerProviderStateMixin {
-  bool isHovered = false;
-
-  @override
-  Widget build(BuildContext context) {
-    final hoverState = useState(false);
-    final hoverMenuState = useState(false);
-
-    final animationController = useAnimationController(
-      vsync: this,
-      duration: AppDimens.textUnderlineDuration,
-    );
-    final curve = useAnimation(
-        Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animationController, curve: Curves.easeOut)));
-
-    useMemoized(
-      () {
-        final newIsHovered = hoverState.value || hoverMenuState.value;
-
-        if (newIsHovered == isHovered) return;
-
-        if (newIsHovered) {
-          animationController.forward(from: 0);
-        } else {
-          animationController.reverse(from: 1);
-        }
-        isHovered = newIsHovered;
-      },
-      [
-        hoverState.value,
-        hoverMenuState.value,
-      ],
-    );
-
-    return CupertinoButton(
-      padding: EdgeInsets.zero,
-      onPressed: () {
-        //TODO add navigation
-      },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: AppDimens.m).copyWith(left: AppDimens.xl),
-        child: MouseRegion(
-          onEnter: (_) {
-            hoverState.value = true;
-          },
-          onExit: (_) {
-            hoverState.value = false;
-          },
-          child: PortalTarget(
-            visible: isHovered,
-            anchor: const Aligned(
-              follower: Alignment.topCenter,
-              target: Alignment.bottomCenter,
-            ),
-            portalFollower: MouseRegion(
-                onEnter: (_) {
-                  hoverMenuState.value = true;
-                },
-                onExit: (_) {
-                  hoverMenuState.value = false;
-                },
-                child: _SubMenu(tab: widget.tab)),
-            child: Stack(
-              children: [
-                SeoText(
-                  widget.tab.name,
-                  style: AppTypography.xl,
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 5),
-                  transform: Matrix4.identity()..scale(curve, 1.0),
-                  child: Text(
-                    widget.tab.name,
-                    style: AppTypography.xl.copyWith(
-                      color: Colors.transparent,
-                      decorationColor: AppColors.primary,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class _SubMenu extends StatelessWidget {
   const _SubMenu({
     Key? key,
@@ -433,7 +345,8 @@ class _SubMenu extends StatelessWidget {
     if (tab.menuTabItems.isEmpty) return const SizedBox.shrink();
 
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: AppDimens.m).copyWith(top: AppDimens.xl),
+      padding: const EdgeInsets.symmetric(vertical: AppDimens.m)
+          .copyWith(top: AppDimens.xl),
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.vertical(
@@ -481,7 +394,9 @@ class _SubMenuItem extends HookWidget {
         },
         child: Container(
           width: double.infinity,
-          color: hoverState.value ? AppColors.primaryLight.withOpacity(0.25) : Colors.white,
+          color: hoverState.value
+              ? AppColors.primaryLight.withOpacity(0.25)
+              : Colors.white,
           child: IntrinsicHeight(
             child: Row(
               mainAxisSize: MainAxisSize.min,

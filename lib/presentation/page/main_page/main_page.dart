@@ -20,11 +20,11 @@ import 'package:stan_handel_web/presentation/style/app_typography.dart';
 import 'package:stan_handel_web/presentation/style/images.dart';
 import 'package:stan_handel_web/presentation/style/screen_size.dart';
 import 'package:stan_handel_web/presentation/util/size_util.dart';
+import 'package:stan_handel_web/presentation/widget/button/hover_on_button.dart';
 import 'package:stan_handel_web/presentation/widget/button/primary_button.dart';
 import 'package:stan_handel_web/presentation/widget/seo_text.dart';
-import 'package:flutter_portal/flutter_portal.dart';
 
-part 'sections/navigation_section/cubit/navigation_section.dart';
+part 'sections/navigation_section/navigation_section.dart';
 
 part 'sections/image_section.dart';
 
@@ -69,13 +69,16 @@ class _Body extends HookWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            context.isScreenSmall ? const SizedBox.shrink() : const _AppBarSection(),
+            const _AppBarSection(),
             const _NavigationSection(),
             _ImageSection(
               onFindUsButtonPressed: () {
-                final currentPositionOffset = Offset(0, scrollController.offset);
-                final mapRenderBox = mapKey.currentContext?.findRenderObject() as RenderBox;
-                final mapPosition = mapRenderBox.localToGlobal(currentPositionOffset);
+                final currentPositionOffset =
+                    Offset(0, scrollController.offset);
+                final mapRenderBox =
+                    mapKey.currentContext?.findRenderObject() as RenderBox;
+                final mapPosition =
+                    mapRenderBox.localToGlobal(currentPositionOffset);
 
                 scrollController.animateTo(
                   mapPosition.dy,
