@@ -1,4 +1,4 @@
-part of '../../main_page.dart';
+part of '../../page_base.dart';
 
 class _NavigationSection extends HookWidget {
   const _NavigationSection({
@@ -14,15 +14,18 @@ class _NavigationSection extends HookWidget {
       children: [
         Center(
           child: SizedBox(
-            width:
-                context.isScreenSmall ? double.infinity : context.contentWidth,
+            width: context.isScreenSmall ? double.infinity : context.contentWidth,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Image(
-                  alignment: Alignment.centerLeft,
-                  image: AssetImage(Images.logoSmall),
+                CupertinoButton(
+                  padding: EdgeInsets.zero,
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Image(
+                    alignment: Alignment.centerLeft,
+                    image: AssetImage(Images.logoSmall),
+                  ),
                 ),
                 _NavigationButtons(
                   cubit: cubit,
@@ -32,9 +35,7 @@ class _NavigationSection extends HookWidget {
             ),
           ),
         ),
-        context.showNavigationMenu
-            ? _NavigationMenu(state: state)
-            : const SizedBox.shrink()
+        context.showNavigationMenu ? _NavigationMenu(state: state) : const SizedBox.shrink()
       ],
     );
   }
@@ -52,8 +53,7 @@ class _NavigationMenu extends StatefulHookWidget {
   State<_NavigationMenu> createState() => _NavigationMenuState();
 }
 
-class _NavigationMenuState extends State<_NavigationMenu>
-    with SingleTickerProviderStateMixin {
+class _NavigationMenuState extends State<_NavigationMenu> with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animation;
 
@@ -112,9 +112,7 @@ class _NavigationMenuContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: HomePageTabEnum.values
-          .map((e) => _NavigationMenuItem(tab: e))
-          .toList(),
+      children: HomePageTabEnum.values.map((e) => _NavigationMenuItem(tab: e)).toList(),
     );
   }
 }
@@ -131,8 +129,7 @@ class _NavigationMenuItem extends StatefulHookWidget {
   State<_NavigationMenuItem> createState() => _NavigationMenuItemState();
 }
 
-class _NavigationMenuItemState extends State<_NavigationMenuItem>
-    with SingleTickerProviderStateMixin {
+class _NavigationMenuItemState extends State<_NavigationMenuItem> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final isExtended = useState(false);
@@ -205,8 +202,7 @@ class _NavigationMenuItemState extends State<_NavigationMenuItem>
                   children: [
                     const Divider(color: Colors.white, height: 0.75),
                     HoverOnButton(
-                      padding:
-                          const EdgeInsets.symmetric(vertical: AppDimens.m),
+                      padding: const EdgeInsets.symmetric(vertical: AppDimens.m),
                       text: e.name,
                       style: AppTypography.xl.copyWith(color: Colors.white),
                       underlineColor: Colors.white,
@@ -251,7 +247,7 @@ class _NavigationButtons extends StatelessWidget {
           .map(
             (e) => HoverOnButton(
               text: e.name,
-              onPressed: () {},
+              onPressed: () => Navigator.of(context).pushNamed(e.route),
               portalTarget: _SubMenu(tab: e),
             ),
           )
@@ -274,8 +270,7 @@ class _NavigationMenuIcon extends StatefulHookWidget {
   State<_NavigationMenuIcon> createState() => _NavigationMenuIconState();
 }
 
-class _NavigationMenuIconState extends State<_NavigationMenuIcon>
-    with SingleTickerProviderStateMixin {
+class _NavigationMenuIconState extends State<_NavigationMenuIcon> with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animation;
 
@@ -345,8 +340,7 @@ class _SubMenu extends StatelessWidget {
     if (tab.menuTabItems.isEmpty) return const SizedBox.shrink();
 
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: AppDimens.m)
-          .copyWith(top: AppDimens.xl),
+      padding: const EdgeInsets.symmetric(vertical: AppDimens.m).copyWith(top: AppDimens.xl),
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.vertical(
@@ -394,9 +388,7 @@ class _SubMenuItem extends HookWidget {
         },
         child: Container(
           width: double.infinity,
-          color: hoverState.value
-              ? AppColors.primaryLight.withOpacity(0.25)
-              : Colors.white,
+          color: hoverState.value ? AppColors.primaryLight.withOpacity(0.25) : Colors.white,
           child: IntrinsicHeight(
             child: Row(
               mainAxisSize: MainAxisSize.min,

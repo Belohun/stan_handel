@@ -1,4 +1,4 @@
-part of '../main_page.dart';
+part of '../page_base.dart';
 
 class _FooterSection extends StatelessWidget {
   const _FooterSection({
@@ -43,12 +43,12 @@ class _FooterContentBig extends StatelessWidget {
                 style: AppTypography.body1w500.copyWith(color: Colors.white),
               ),
               ...HomePageTabEnum.values.map(
-                (e) => Padding(
+                (e) => HoverOnButton(
                   padding: const EdgeInsets.only(top: AppDimens.s),
-                  child: SeoText(
-                    e.name,
-                    style: AppTypography.body1w300.copyWith(color: Colors.white),
-                  ),
+
+                  text: e.name,
+                  style: AppTypography.body1w300.copyWith(color: Colors.white),
+                  onPressed: () => Navigator.of(context).pushNamed(e.route),
                 ),
               ),
             ],

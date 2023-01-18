@@ -40,7 +40,7 @@ flutter:
 
   assets:
     - assets/translations/
-    - assets/png/
+    - assets/images/
     - assets/svg/
     - assets/google_fonts/
 

@@ -1,4 +1,4 @@
-part of '../main_page.dart';
+part of '../home_page.dart';
 
 class _ImageSection extends StatelessWidget {
   const _ImageSection({
@@ -70,6 +70,7 @@ class _ImageSectionBig extends StatelessWidget {
                     PrimaryButton(
                       onPressed: onFindUsButtonPressed,
                       text: LocaleKeys.home_page_image_section_button_text.tr(),
+                      suffixWidget: const Icon(Icons.arrow_right_alt_rounded),
                     )
                   ],
                 ),
@@ -135,6 +136,7 @@ class _ImageSectionSmall extends StatelessWidget {
                     PrimaryButton(
                       onPressed: onFindUsButtonPressed,
                       text: LocaleKeys.home_page_image_section_button_text.tr(),
+                      suffixWidget: const Icon(Icons.arrow_right_alt_rounded),
                     )
                   ],
                 ),

@@ -9,11 +9,13 @@ class PrimaryButton extends StatelessWidget {
     required this.text,
     this.onPressed,
     this.insidePadding = const EdgeInsets.symmetric(vertical: AppDimens.m, horizontal: AppDimens.xl),
+    this.suffixWidget,
     Key? key,
   }) : super(key: key);
   final String text;
   final VoidCallback? onPressed;
   final EdgeInsets insidePadding;
+  final Widget? suffixWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class PrimaryButton extends StatelessWidget {
       padding: EdgeInsets.zero,
       minSize: AppDimens.zero,
       borderRadius: const BorderRadius.all(
-        Radius.circular(AppDimens.primaryButtonRadius),
+        Radius.circular(AppDimens.cardRadius),
       ),
       color: AppColors.primary,
       onPressed: onPressed,
@@ -37,8 +39,10 @@ class PrimaryButton extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(width: AppDimens.xl),
-            const Icon(Icons.arrow_right_alt_rounded),
+            if (suffixWidget != null) ...[
+              const SizedBox(width: AppDimens.xl),
+              suffixWidget!,
+            ],
           ],
         ),
       ),

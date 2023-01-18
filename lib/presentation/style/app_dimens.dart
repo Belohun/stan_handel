@@ -65,4 +65,7 @@ class AppDimens {
   static const textUnderlineDuration = Duration(milliseconds: 150);
 
   static const iconSize = 32.0;
+
+  static const cardRadius = 8.0;
+
 }

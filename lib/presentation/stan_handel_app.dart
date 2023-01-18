@@ -1,7 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portal/flutter_portal.dart';
-import 'package:stan_handel_web/presentation/page/main_page/main_page.dart';
+import 'package:stan_handel_web/presentation/page/calculator/calculator_page.dart';
+import 'package:stan_handel_web/presentation/page/home/home_page.dart';
 import 'package:stan_handel_web/presentation/style/app_themes.dart';
 
 class StanHandelApp extends StatelessWidget {
@@ -15,9 +16,10 @@ class StanHandelApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        initialRoute: '/',
+        initialRoute: HomePage.route,
         routes: {
-          '/': (context) => const MainPage(),
+          HomePage.route: (context) => const HomePage(),
+          CalculatorPage.route: (context) => const CalculatorPage(),
         },
       ),
     );
