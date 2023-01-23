@@ -40,9 +40,16 @@
     }
   },
   "calculator_page" : {
-    "image_section" : {
-      "header": "Kalkulator mas",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis nunc eu mauris hendrerit lobortis. Pellentesque volutpat nulla ac arcu aliquet, et lacinia erat consectetur. Vivamus faucibus, odio quis scelerisque mattis"
+    "calculator_section" : {
+      "header": "Kalkulator masy",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis nunc eu mauris hendrerit lobortis. Pellentesque volutpat nulla ac arcu aliquet, et lacinia erat consectetur. Vivamus faucibus, odio quis scelerisque mattis",
+      "density" : "Gęstość",
+      "width" : "Szerokość",
+      "thickness" : "Grubość",
+      "mass" : "Masa",
+      "calculate" : "Oblicz",
+      "noValueError": "Wpisz poprawną wartość",
+      "noSelectedDensityError": "Wybierz jedną wartość gęstości"
     }
   }
 }

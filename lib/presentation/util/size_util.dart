@@ -49,6 +49,10 @@ extension ScreenSizeContexExtension on BuildContext {
     return 600;
   }
 
+  double get bigContentHeight {
+    return 900;
+  }
+
   double get mapHeight {
     if (isScreenSmall) {
       return 400;

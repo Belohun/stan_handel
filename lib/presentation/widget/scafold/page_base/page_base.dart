@@ -8,6 +8,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooked_bloc/hooked_bloc.dart';
 import 'package:stan_handel_web/domain/language/language_code.dart';
+import 'package:stan_handel_web/presentation/style/app_shadows.dart';
+import 'package:stan_handel_web/presentation/widget/container/stan_handel_card.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/model/home_page_tab_enum.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/model/tab_menu_item_enum.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/sections/navigation_section/cubit/navigation_section_cubit.dart';
@@ -19,6 +21,7 @@ import 'package:stan_handel_web/presentation/style/screen_size.dart';
 import 'package:stan_handel_web/presentation/util/size_util.dart';
 import 'package:stan_handel_web/presentation/widget/button/hover_on_button.dart';
 import 'package:stan_handel_web/presentation/widget/text/seo_text.dart';
+import 'package:stan_handel_web/presentation/extension/navigator_extension.dart';
 
 part 'sections/navigation_section/navigation_section.dart';
 

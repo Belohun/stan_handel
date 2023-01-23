@@ -29,6 +29,8 @@ class StanHandelTextField extends HookWidget {
     this.autofocus = false,
     this.textAlign = TextAlign.left,
     this.inputFormatters,
+    this.fillColor = AppColors.gray7,
+    this.hoverColorSameAsFill = false,
   }) : super(key: key);
 
   final String? hintText;
@@ -48,6 +50,8 @@ class StanHandelTextField extends HookWidget {
   final String? initText;
   final TextAlign textAlign;
   final List<TextInputFormatter>? inputFormatters;
+  final Color fillColor;
+  final bool hoverColorSameAsFill;
 
   StanHandelTextField.numberInput({
     this.errorText,
@@ -67,6 +71,8 @@ class StanHandelTextField extends HookWidget {
     this.suffix,
     this.autofocus = false,
     this.textAlign = TextAlign.left,
+    this.fillColor = AppColors.gray7,
+    this.hoverColorSameAsFill = false,
     bool fractionsAlwaysVisible = false,
     bool allowDecimals = false,
     double? initNumber,
@@ -109,7 +115,8 @@ class StanHandelTextField extends HookWidget {
         labelStyle: AppTypography.big.copyWith(color: AppColors.gray2, height: 0.5),
         hintText: hintText,
         hintStyle: AppTypography.medium.copyWith(color: AppColors.gray2),
-        fillColor: AppColors.gray7,
+        fillColor: fillColor,
+        hoverColor: hoverColorSameAsFill ?  fillColor : null,
         filled: true,
         prefixIcon: prefixIcon,
         suffixIcon: suffix != null
@@ -146,7 +153,11 @@ class StanHandelTextField extends HookWidget {
     );
   }
 }
+
 class AlwaysDisabledFocusNode extends FocusNode {
   @override
   bool get hasFocus => false;
+
+  @override
+  bool consumeKeyboardToken() => false;
 }

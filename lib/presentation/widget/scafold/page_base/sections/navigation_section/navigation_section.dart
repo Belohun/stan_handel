@@ -21,7 +21,7 @@ class _NavigationSection extends HookWidget {
               children: [
                 CupertinoButton(
                   padding: EdgeInsets.zero,
-                  onPressed: () => Navigator.of(context).pop(),
+                  onPressed: () => SafeNavigator.pop(context),
                   child: const Image(
                     alignment: Alignment.centerLeft,
                     image: AssetImage(Images.logoSmall),
@@ -164,9 +164,7 @@ class _NavigationMenuItemState extends State<_NavigationMenuItem> with SingleTic
                 text: widget.tab.name,
                 style: AppTypography.xl.copyWith(color: Colors.white),
                 underlineColor: Colors.white,
-                onPressed: () {
-                  //TODO
-                },
+                onPressed: () => SafeNavigator.pushNamed(context, widget.tab.route),
               ),
               if (widget.tab.menuTabItems.isNotEmpty) ...[
                 CupertinoButton(
@@ -206,9 +204,7 @@ class _NavigationMenuItemState extends State<_NavigationMenuItem> with SingleTic
                       text: e.name,
                       style: AppTypography.xl.copyWith(color: Colors.white),
                       underlineColor: Colors.white,
-                      onPressed: () {
-                        //TODO
-                      },
+                      onPressed: () => SafeNavigator.pushNamed(context, e.route),
                     ),
                   ],
                 ),
@@ -247,7 +243,7 @@ class _NavigationButtons extends StatelessWidget {
           .map(
             (e) => HoverOnButton(
               text: e.name,
-              onPressed: () => Navigator.of(context).pushNamed(e.route),
+              onPressed: () => SafeNavigator.pushNamed(context, e.route),
               portalTarget: _SubMenu(tab: e),
             ),
           )
@@ -339,23 +335,23 @@ class _SubMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     if (tab.menuTabItems.isEmpty) return const SizedBox.shrink();
 
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: AppDimens.m).copyWith(top: AppDimens.xl),
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.vertical(
-          bottom: Radius.circular(AppDimens.m),
-        ),
+    return StanHandelCard(
+      shadow: AppShadows.cardShadowAlternative,
+      borderRadius: const BorderRadius.vertical(
+        bottom: Radius.circular(AppDimens.m),
       ),
-      child: IntrinsicWidth(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: tab.menuTabItems
-              .map(
-                (e) => _SubMenuItem(item: e),
-              )
-              .toList(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: AppDimens.m).copyWith(top: AppDimens.xl),
+        child: IntrinsicWidth(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: tab.menuTabItems
+                .map(
+                  (e) => _SubMenuItem(item: e),
+                )
+                .toList(),
+          ),
         ),
       ),
     );
@@ -376,9 +372,7 @@ class _SubMenuItem extends HookWidget {
 
     return CupertinoButton(
       padding: EdgeInsets.zero,
-      onPressed: () {
-        //TODO add navigation
-      },
+      onPressed: () => SafeNavigator.pushNamed(context, item.route),
       child: MouseRegion(
         onEnter: (_) {
           hoverState.value = true;

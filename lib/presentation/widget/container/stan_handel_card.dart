@@ -31,6 +31,7 @@ class StanHandelCard extends StatelessWidget {
           boxShadow: [shadow],
         ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             child,
             if (footer != null)

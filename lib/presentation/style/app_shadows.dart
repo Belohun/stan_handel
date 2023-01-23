@@ -8,8 +8,9 @@ class AppShadows {
   );
 
   static const cardShadowAlternative = BoxShadow(
-    color: Color.fromRGBO(0, 0, 0, 0.03),
+    color: Color.fromRGBO(0, 0, 0, 0.08),
     offset: Offset(0, 3),
+    blurRadius: 5
   );
 
   static const smallShadow = BoxShadow(

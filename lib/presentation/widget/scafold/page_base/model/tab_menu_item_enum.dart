@@ -1,98 +1,117 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:stan_handel_web/generated/local_keys.g.dart';
 
-abstract class TabMenuEnumBase {}
+abstract class TabMenuEnumBase {
+  String get route;
 
-extension TabMenuExtension on TabMenuEnumBase {
-  String get name {
-    switch (runtimeType) {
-      case TabMenuRods:
-        return (this as TabMenuRods).name;
-
-      case TabMenuSheetMetal:
-        return (this as TabMenuSheetMetal).name;
-
-      case TabMenuPipes:
-        return (this as TabMenuPipes).name;
-
-      case TabMenuOthers:
-        return (this as TabMenuOthers).name;
-
-      default:
-        return '';
-    }
-  }
+  String get name;
 }
 
-enum TabMenuRods with TabMenuEnumBase { round }
+enum TabMenuRods with TabMenuEnumBase {
+  round(
+    '', //TODO
+    LocaleKeys.home_page_navigation_sub_menu_rods_round,
+  );
 
-extension TabMenuRodsExtension on TabMenuRods {
-  String get name {
-    switch (this) {
-      case TabMenuRods.round:
-        return LocaleKeys.home_page_navigation_sub_menu_rods_round.tr();
-    }
-  }
+  const TabMenuRods(
+    this.route,
+    this._key,
+  );
+
+  final String _key;
+
+  @override
+  final String route;
+
+  @override
+  String get name => _key.tr();
 }
 
 enum TabMenuSheetMetal with TabMenuEnumBase {
-  hotRolled,
-  galvanized,
-  checkerPlate,
-  coldRolled,
-}
+  hotRolled(
+    "", //TODO
+    LocaleKeys.home_page_navigation_sub_menu_sheet_metal_hotRolled,
+  ),
+  galvanized(
+    "", //TODO
+    LocaleKeys.home_page_navigation_sub_menu_sheet_metal_galvanized,
+  ),
+  checkerPlate(
+    "", //TODO
+    LocaleKeys.home_page_navigation_sub_menu_sheet_metal_checkerPlate,
+  ),
+  coldRolled(
+    "", //TODO
+    LocaleKeys.home_page_navigation_sub_menu_sheet_metal_coldRolled,
+  );
 
-extension TabMenuSheetMetalExtension on TabMenuSheetMetal {
-  String get name {
-    switch (this) {
-      case TabMenuSheetMetal.hotRolled:
-        return LocaleKeys.home_page_navigation_sub_menu_sheet_metal_hotRolled.tr();
-      case TabMenuSheetMetal.galvanized:
-        return LocaleKeys.home_page_navigation_sub_menu_sheet_metal_galvanized.tr();
+  const TabMenuSheetMetal(
+    this.route,
+    this._key,
+  );
 
-      case TabMenuSheetMetal.checkerPlate:
-        return LocaleKeys.home_page_navigation_sub_menu_sheet_metal_checkerPlate.tr();
+  final String _key;
 
-      case TabMenuSheetMetal.coldRolled:
-        return LocaleKeys.home_page_navigation_sub_menu_sheet_metal_coldRolled.tr();
-    }
-  }
+  @override
+  final String route;
+
+  @override
+  String get name => _key.tr();
 }
 
 enum TabMenuPipes with TabMenuEnumBase {
-  steel,
-  seamless,
-  seamed,
-}
+  steel(
+    '', //TODO
 
-extension TabMenuPipesExtension on TabMenuPipes {
-  String get name {
-    switch (this) {
-      case TabMenuPipes.steel:
-        return LocaleKeys.home_page_navigation_sub_menu_pipes_steel.tr();
+    LocaleKeys.home_page_navigation_sub_menu_pipes_steel,
+  ),
+  seamless(
+    '', //TODO
 
-      case TabMenuPipes.seamless:
-        return LocaleKeys.home_page_navigation_sub_menu_pipes_seamless.tr();
+    LocaleKeys.home_page_navigation_sub_menu_pipes_seamless,
+  ),
+  seamed(
+    '', //TODO
 
-      case TabMenuPipes.seamed:
-        return LocaleKeys.home_page_navigation_sub_menu_pipes_seamed.tr();
-    }
-  }
+    LocaleKeys.home_page_navigation_sub_menu_pipes_seamed,
+  );
+
+  const TabMenuPipes(
+    this.route,
+    this._key,
+  );
+
+  final String _key;
+
+  @override
+  final String route;
+
+  @override
+  String get name => _key.tr();
 }
 
 enum TabMenuOthers with TabMenuEnumBase {
-  angleBars,
-  closedProfiles,
-}
+  angleBars(
+    "", //TODO
 
-extension TabMenuOthersExtension on TabMenuOthers {
-  String get name {
-    switch (this) {
-      case TabMenuOthers.angleBars:
-        return LocaleKeys.home_page_navigation_sub_menu_others_steel_angle_bars.tr();
+    LocaleKeys.home_page_navigation_sub_menu_others_steel_angle_bars,
+  ),
+  closedProfiles(
+    "", //TODO
 
-      case TabMenuOthers.closedProfiles:
-        return LocaleKeys.home_page_navigation_sub_menu_others_closed_profiles.tr();
-    }
-  }
+    LocaleKeys.home_page_navigation_sub_menu_others_closed_profiles,
+  );
+
+  const TabMenuOthers(
+    this.route,
+    this._key,
+  );
+
+  final String _key;
+
+  @override
+  final String route;
+
+  @override
+  String get name => _key.tr();
 }

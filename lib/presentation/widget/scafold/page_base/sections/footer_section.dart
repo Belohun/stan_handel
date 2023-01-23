@@ -45,10 +45,9 @@ class _FooterContentBig extends StatelessWidget {
               ...HomePageTabEnum.values.map(
                 (e) => HoverOnButton(
                   padding: const EdgeInsets.only(top: AppDimens.s),
-
                   text: e.name,
                   style: AppTypography.body1w300.copyWith(color: Colors.white),
-                  onPressed: () => Navigator.of(context).pushNamed(e.route),
+                  onPressed: () => SafeNavigator.pushNamed(context, e.route),
                 ),
               ),
             ],
@@ -163,9 +162,11 @@ class _FooterContentSmall extends StatelessWidget {
               ...HomePageTabEnum.values.map(
                 (e) => Padding(
                   padding: const EdgeInsets.only(top: AppDimens.s),
-                  child: SeoText(
-                    e.name,
+                  child: HoverOnButton(
+                    padding: const EdgeInsets.only(top: AppDimens.s),
+                    text: e.name,
                     style: AppTypography.body1w300.copyWith(color: Colors.white),
+                    onPressed: () => SafeNavigator.pushNamed(context, e.route),
                   ),
                 ),
               ),

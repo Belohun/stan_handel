@@ -10,21 +10,23 @@ class PrimaryButton extends StatelessWidget {
     this.onPressed,
     this.insidePadding = const EdgeInsets.symmetric(vertical: AppDimens.m, horizontal: AppDimens.xl),
     this.suffixWidget,
+    this.radius = const BorderRadius.all(
+      Radius.circular(AppDimens.primaryButtonRadius),
+    ),
     Key? key,
   }) : super(key: key);
   final String text;
   final VoidCallback? onPressed;
   final EdgeInsets insidePadding;
   final Widget? suffixWidget;
+  final BorderRadius radius;
 
   @override
   Widget build(BuildContext context) {
     return CupertinoButton(
       padding: EdgeInsets.zero,
       minSize: AppDimens.zero,
-      borderRadius: const BorderRadius.all(
-        Radius.circular(AppDimens.cardRadius),
-      ),
+      borderRadius: radius,
       color: AppColors.primary,
       onPressed: onPressed,
       child: Container(

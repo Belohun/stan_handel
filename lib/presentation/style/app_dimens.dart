@@ -66,6 +66,8 @@ class AppDimens {
 
   static const iconSize = 32.0;
 
+  static const smallIconSize = 14.0;
+
   static const cardRadius = 8.0;
 
 }
