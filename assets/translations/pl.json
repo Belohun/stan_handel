@@ -38,5 +38,18 @@
       "content_p1": "Każdego klienta traktujemy z zaangażowaniem, dostosowując się do indywidualnych potrzeb. Staramy się udzielać fachowych porad, pomagając w wyborze odpowiednich produktów.",
       "content_p2": "Oferujemy szeroki asortyment towarów zarówno w I (atestowanym) jak i II gatunku, dzięki czemu możemy zaproponować najkorzystniejsze rozwiązania, dostosowując się do potrzeb naszych kontrahentów. Umożliwiamy negocjowanie cen, co sprawia, że oferta jest zawsze atrakcyjna oraz na miarę. Wynosimy handel hurtowy i detaliczny wyrobów hutniczych na nowy, wyższy poziom. Warto poznać wszystkie nasze produkty."
     }
+  },
+  "calculator_page" : {
+    "calculator_section" : {
+      "header": "Kalkulator masy",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis nunc eu mauris hendrerit lobortis. Pellentesque volutpat nulla ac arcu aliquet, et lacinia erat consectetur. Vivamus faucibus, odio quis scelerisque mattis",
+      "density" : "Gęstość",
+      "width" : "Szerokość",
+      "thickness" : "Grubość",
+      "mass" : "Masa",
+      "calculate" : "Oblicz",
+      "noValueError": "Wpisz poprawną wartość",
+      "noSelectedDensityError": "Wybierz jedną wartość gęstości"
+    }
   }
 }

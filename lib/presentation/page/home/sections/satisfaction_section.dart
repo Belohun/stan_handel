@@ -1,4 +1,4 @@
-part of '../main_page.dart';
+part of '../home_page.dart';
 
 class _SatisfactionSection extends StatelessWidget {
   const _SatisfactionSection({Key? key}) : super(key: key);

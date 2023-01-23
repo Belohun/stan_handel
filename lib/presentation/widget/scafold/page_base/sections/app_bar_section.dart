@@ -1,4 +1,4 @@
-part of '../main_page.dart';
+part of '../page_base.dart';
 
 class _AppBarSection extends HookWidget {
   const _AppBarSection({

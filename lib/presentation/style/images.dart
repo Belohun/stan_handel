@@ -1,4 +1,4 @@
-const path = 'assets/png/';
+const path = 'assets/images/';
 
 class Images {
   const Images._();
@@ -8,6 +8,8 @@ class Images {
   static const logoSmall = "${path}logo_small.png";
 
   static const steelSheets = "${path}steel_sheets.jpg";
+
+  static const steelSheetsStack = "${path}steel_sheets_stack.jpg";
 
   static const steelSheetsSmall = "${path}steel_sheets_small.webp";
 
