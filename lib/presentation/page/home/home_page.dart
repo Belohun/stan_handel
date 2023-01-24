@@ -1,13 +1,8 @@
-// ignore_for_file: avoid_web_libraries_in_flutter
-import 'dart:ui' as ui;
-import 'dart:html' as html;
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:stan_handel_web/generated/local_keys.g.dart';
-import 'package:stan_handel_web/presentation/style/app_colors.dart';
+import 'package:stan_handel_web/presentation/widget/section/map_section.dart';
 import 'package:stan_handel_web/presentation/style/app_dimens.dart';
 import 'package:stan_handel_web/presentation/style/app_typography.dart';
 import 'package:stan_handel_web/presentation/style/images.dart';
@@ -16,7 +11,6 @@ import 'package:stan_handel_web/presentation/widget/button/primary_button.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/page_base.dart';
 import 'package:stan_handel_web/presentation/widget/text/seo_text.dart';
 
-part 'sections/map_section.dart';
 
 part 'sections/image_section.dart';
 
@@ -74,7 +68,7 @@ class _Body extends StatelessWidget {
           },
         ),
         const _SatisfactionSection(),
-        _MapSection(
+        MapSection(
           key: mapKey,
         ),
       ],

@@ -87,7 +87,7 @@ class _CalculateRow extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: _InfoColumn(
+                child: InfoColumn(
                   title: '${LocaleKeys.calculator_page_calculator_section_mass.tr()} 1m [kg]',
                   info: data.mass.safeFormattedString(fractionsDigits: 3),
                 ),
@@ -280,36 +280,4 @@ class _InputRow extends StatelessWidget {
   }
 }
 
-class _InfoColumn extends StatelessWidget {
-  const _InfoColumn({
-    required this.title,
-    required this.info,
-    Key? key,
-  }) : super(key: key);
 
-  final String title;
-  final String info;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppDimens.m),
-      child: SelectionArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              style: AppTypography.big.copyWith(color: AppColors.gray2),
-            ),
-            const SizedBox(height: AppDimens.s),
-            Text(
-              info,
-              style: AppTypography.h3w400.copyWith(color: AppColors.darkBlue, height: 1),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}

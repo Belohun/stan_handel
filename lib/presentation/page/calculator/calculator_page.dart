@@ -15,6 +15,7 @@ import 'package:stan_handel_web/presentation/util/size_util.dart';
 import 'package:stan_handel_web/presentation/widget/button/primary_button.dart';
 import 'package:stan_handel_web/presentation/widget/container/stan_handel_card.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/page_base.dart';
+import 'package:stan_handel_web/presentation/widget/text/info.dart';
 import 'package:stan_handel_web/presentation/widget/text/seo_text.dart';
 import 'package:stan_handel_web/presentation/widget/text/stan_handel_text_field.dart';
 

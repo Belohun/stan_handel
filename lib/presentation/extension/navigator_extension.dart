@@ -7,14 +7,18 @@ extension SafeNavigator on Navigator {
     final isSameRoute = currentRoute == route;
     if (isSameRoute) return null;
 
-    final push = await Navigator.of(context).pushNamed(route);
-    return push;
+    try {
+      final push = await Navigator.of(context).pushNamed(route);
+      return push;
+    } catch (_) {
+      return null;
+    }
   }
 
-  static void pop(BuildContext context) {
+  static void popUntilHome(BuildContext context) {
     final currentRoute = ModalRoute.of(context)?.settings.name ?? '';
     final isHomePageRoute = currentRoute == HomePage.route;
     if (isHomePageRoute) return;
-    return Navigator.of(context).pop();
+    return Navigator.of(context).popUntil((route) => route.isFirst);
   }
 }

@@ -21,7 +21,7 @@ class _NavigationSection extends HookWidget {
               children: [
                 CupertinoButton(
                   padding: EdgeInsets.zero,
-                  onPressed: () => SafeNavigator.pop(context),
+                  onPressed: () => SafeNavigator.popUntilHome(context),
                   child: const Image(
                     alignment: Alignment.centerLeft,
                     image: AssetImage(Images.logoSmall),

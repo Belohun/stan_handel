@@ -16,4 +16,9 @@ class Images {
   static const pipes = "${path}pipes.jpeg";
 
   static const shakeHands = "${path}shake_hands.jpg";
+
+  static const contact = "${path}contact.jpg";
+
+  static const phone = "${path}phone.jpg";
+
 }

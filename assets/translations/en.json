@@ -51,5 +51,18 @@
       "noValueError": "Please enter correct value",
       "noSelectedDensityError": "Please select one density value"
     }
+  },
+  "footer" : {
+    "menu" : "Menu",
+    "office" : "Office",
+    "workingHours" : "Open: Mon-Fr, 8:00 - 16:00",
+    "contact": "Contact"
+  },
+  "contact_page": {
+    "h1": "Contact",
+    "content_p1" : "In order to place an order or ask about the goods, please contact us by phone or e-mail.",
+    "phone" : "Phone:",
+    "email" : "E-mail:",
+    "address" : "Address"
   }
 }

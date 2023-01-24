@@ -13,9 +13,9 @@ class _FooterSection extends StatelessWidget {
       child: Center(
         child: SizedBox(
           width: context.contentWidth,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: AppDimens.xxl),
-            child: context.isScreenSmall ? const _FooterContentSmall() : const _FooterContentBig(),
+          child: const Padding(
+            padding: EdgeInsets.symmetric(vertical: AppDimens.xxl),
+            child: _FooterContentBig(),
           ),
         ),
       ),
@@ -23,23 +23,21 @@ class _FooterSection extends StatelessWidget {
   }
 }
 
-class _FooterContentBig extends StatelessWidget {
+class _FooterContentBig extends HookWidget {
   const _FooterContentBig({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+    final children = useMemoized(
+      () => [
         SelectionArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SeoText(
-                "Menu",
+                LocaleKeys.footer_menu.tr(),
                 style: AppTypography.body1w500.copyWith(color: Colors.white),
               ),
               ...HomePageTabEnum.values.map(
@@ -58,7 +56,7 @@ class _FooterContentBig extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SeoText(
-                "Biuro",
+                LocaleKeys.footer_office.tr(),
                 style: AppTypography.body1w500.copyWith(color: Colors.white),
               ),
               const SizedBox(height: AppDimens.s),
@@ -76,7 +74,7 @@ class _FooterContentBig extends StatelessWidget {
               ),
               const SizedBox(height: AppDimens.s),
               SeoText(
-                "Czynne: pon-pt 8:00 - 16:00",
+                LocaleKeys.footer_workingHours.tr(),
                 style: AppTypography.body1w300.copyWith(color: Colors.white),
               ),
             ],
@@ -87,7 +85,7 @@ class _FooterContentBig extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SeoText(
-                "Kontakt",
+                LocaleKeys.footer_contact.tr(),
                 style: AppTypography.body1w500.copyWith(color: Colors.white),
               ),
               const SizedBox(height: AppDimens.s),
@@ -137,127 +135,17 @@ class _FooterContentBig extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-class _FooterContentSmall extends StatelessWidget {
-  const _FooterContentSmall({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
+    if (context.isScreenSmall) {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: children,
+      );
+    }
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SelectionArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SeoText(
-                "Menu",
-                style: AppTypography.body1w500.copyWith(color: Colors.white),
-              ),
-              ...HomePageTabEnum.values.map(
-                (e) => Padding(
-                  padding: const EdgeInsets.only(top: AppDimens.s),
-                  child: HoverOnButton(
-                    padding: const EdgeInsets.only(top: AppDimens.s),
-                    text: e.name,
-                    style: AppTypography.body1w300.copyWith(color: Colors.white),
-                    onPressed: () => SafeNavigator.pushNamed(context, e.route),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: AppDimens.xl),
-        SelectionArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SeoText(
-                "Biuro",
-                style: AppTypography.body1w500.copyWith(color: Colors.white),
-              ),
-              const SizedBox(height: AppDimens.s),
-              SeoText(
-                "Stan Handel",
-                style: AppTypography.body1w300.copyWith(color: Colors.white),
-              ),
-              SeoText(
-                "43-100 Tychy",
-                style: AppTypography.body1w300.copyWith(color: Colors.white),
-              ),
-              SeoText(
-                "ul. Mikołowska 272",
-                style: AppTypography.body1w300.copyWith(color: Colors.white),
-              ),
-              const SizedBox(height: AppDimens.s),
-              SeoText(
-                "Czynne: pon-pt 8:00 - 16:00",
-                style: AppTypography.body1w300.copyWith(color: Colors.white),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: AppDimens.xl),
-        SelectionArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SeoText(
-                "Kontakt",
-                style: AppTypography.body1w500.copyWith(color: Colors.white),
-              ),
-              const SizedBox(height: AppDimens.s),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.phone_android,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(width: AppDimens.s),
-                  SeoText(
-                    "+48 608 768 507 ",
-                    style: AppTypography.body1w300.copyWith(color: Colors.white),
-                  ),
-                ],
-              ),
-              const SizedBox(height: AppDimens.s),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.phone_android,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(width: AppDimens.s),
-                  SeoText(
-                    "+48 608 768 507",
-                    style: AppTypography.body1w300.copyWith(color: Colors.white),
-                  ),
-                ],
-              ),
-              const SizedBox(height: AppDimens.s),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.mail,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(width: AppDimens.s),
-                  SeoText(
-                    "biuro@stanhandel.pl",
-                    style: AppTypography.body1w300.copyWith(color: Colors.white),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ],
+      children: children,
     );
   }
 }
