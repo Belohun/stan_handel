@@ -15,7 +15,7 @@ class _FooterSection extends StatelessWidget {
           width: context.contentWidth,
           child: const Padding(
             padding: EdgeInsets.symmetric(vertical: AppDimens.xxl),
-            child: _FooterContentBig(),
+            child: _FooterContent(),
           ),
         ),
       ),
@@ -23,8 +23,8 @@ class _FooterSection extends StatelessWidget {
   }
 }
 
-class _FooterContentBig extends HookWidget {
-  const _FooterContentBig({
+class _FooterContent extends HookWidget {
+  const _FooterContent({
     Key? key,
   }) : super(key: key);
 
@@ -51,6 +51,7 @@ class _FooterContentBig extends HookWidget {
             ],
           ),
         ),
+        if (context.isScreenSmall) const SizedBox(height: AppDimens.xl),
         SelectionArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,6 +81,7 @@ class _FooterContentBig extends HookWidget {
             ],
           ),
         ),
+        if (context.isScreenSmall) const SizedBox(height: AppDimens.xl),
         SelectionArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

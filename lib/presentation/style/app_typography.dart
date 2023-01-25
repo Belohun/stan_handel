@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stan_handel_web/presentation/style/app_colors.dart';
 
 class AppTypography {
   static const fontFamily = 'Inter';
@@ -9,6 +10,8 @@ class AppTypography {
     fontSize: 50,
     height: 1.4,
     fontWeight: FontWeight.w400,
+    color: AppColors.darkBlue,
+
   );
 
   /// fontSize: 31
@@ -17,6 +20,7 @@ class AppTypography {
     height: 1.3,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w400,
+    color: AppColors.darkBlue,
   );
 
   /// fontSize: 25
@@ -39,6 +43,8 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     height: 2,
     fontSize: 22,
+    color: AppColors.darkBlue,
+
   );
 
   /// fontSize: 20
@@ -47,6 +53,8 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     fontSize: 20,
     height: 1.38,
+    color: AppColors.darkBlue,
+
   );
 
   /// fontSize: 17
@@ -55,6 +63,8 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     fontSize: 17,
     height: 1.4,
+    color: AppColors.darkBlue,
+
   );
 
   /// fontSize: 17
@@ -71,6 +81,8 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     fontSize: 14,
     height: 1.4,
+    color: AppColors.darkBlue,
+
   );
 
   /// fontSize: 14
@@ -118,6 +130,8 @@ class AppTypography {
     height: 1.7,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w400,
+    color: AppColors.darkBlue,
+
   );
 
   /// fontSize: 20
@@ -126,6 +140,8 @@ class AppTypography {
     height: 1.2,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w300,
+    color: AppColors.darkBlue,
+
   );
 
   /// fontSize: 20
@@ -134,6 +150,8 @@ class AppTypography {
     height: 1.2,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w500,
+    color: AppColors.darkBlue,
+
   );
 
   /// fontSize: 11

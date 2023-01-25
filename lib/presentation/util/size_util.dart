@@ -49,6 +49,8 @@ extension ScreenSizeContexExtension on BuildContext {
     return 600;
   }
 
+  double get bigIconHeight => contentHeight / 2;
+
   double get bigContentHeight {
     return 900;
   }
