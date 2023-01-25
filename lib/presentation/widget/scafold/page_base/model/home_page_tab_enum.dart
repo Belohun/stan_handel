@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:stan_handel_web/generated/local_keys.g.dart';
 import 'package:stan_handel_web/presentation/page/calculator/calculator_page.dart';
+import 'package:stan_handel_web/presentation/page/contact/contact_page.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/model/tab_menu_item_enum.dart';
 
 enum HomePageTabEnum {
@@ -26,7 +27,7 @@ enum HomePageTabEnum {
   ),
   contact(
     LocaleKeys.home_page_navigation_contact,
-    '',
+    ContactPage.route,
   );
 
   const HomePageTabEnum(this._name, this.route);

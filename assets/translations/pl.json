@@ -51,5 +51,19 @@
       "noValueError": "Wpisz poprawną wartość",
       "noSelectedDensityError": "Wybierz jedną wartość gęstości"
     }
+  },
+  "footer" : {
+    "menu" : "Menu",
+    "office" : "Biuro",
+    "workingHours" : "Czynne: pon-pt, 8:00 - 16:00",
+    "contact": "Kontakt"
+  },
+  "contact_page": {
+    "h1": "Kontakt",
+    "content_p1" : "W celu dokonania zamówienia lub zapytania o towar zapraszamy do kontaktu telefonicznego oraz mailowego.",
+    "phone" : "Telefon:",
+    "email" : "E-mail:",
+    "address" : "Adres"
+
   }
 }

@@ -62,7 +62,7 @@ class _SatisfactionSectionBig extends StatelessWidget {
           ),
           Image(
             width: context.contentWidth - context.textContentWidth,
-            height: context.contentHeight,
+            height: context.bigIconHeight,
             image: const AssetImage(Images.shakeHands),
           ),
         ],

@@ -15,5 +15,13 @@ class Images {
 
   static const pipes = "${path}pipes.jpeg";
 
-  static const shakeHands = "${path}shake_hands.jpg";
+  static const shakeHands = "${path}shake_hands.png";
+
+  static const contact = "${path}contact.jpg";
+
+  static const phone = "${path}phone.png";
+
+  static const localization = "${path}localization.png";
+
+  static const quality = "${path}quality.png";
 }

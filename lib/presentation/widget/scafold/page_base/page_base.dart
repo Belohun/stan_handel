@@ -8,6 +8,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooked_bloc/hooked_bloc.dart';
 import 'package:stan_handel_web/domain/language/language_code.dart';
+import 'package:stan_handel_web/generated/local_keys.g.dart';
 import 'package:stan_handel_web/presentation/style/app_shadows.dart';
 import 'package:stan_handel_web/presentation/widget/container/stan_handel_card.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/model/home_page_tab_enum.dart';
