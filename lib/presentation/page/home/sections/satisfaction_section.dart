@@ -81,6 +81,7 @@ class _SatisfactionSectionSmall extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        const SizedBox(height: AppDimens.xl),
         SelectionArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -118,7 +119,7 @@ class _SatisfactionSectionSmall extends StatelessWidget {
                   maxLines: null,
                 ),
               ),
-              const SizedBox(height: AppDimens.m),
+              const SizedBox(height: AppDimens.xl),
             ],
           ),
         ),

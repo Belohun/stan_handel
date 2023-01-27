@@ -29,7 +29,7 @@ class InfoColumn extends StatelessWidget {
             const SizedBox(height: AppDimens.s),
             SeoText(
               info,
-              style: AppTypography.h3w400,
+              style: AppTypography.h3w400.copyWith(height: 1),
             )
           ],
         ),

@@ -203,9 +203,12 @@ class _Density extends StatelessWidget {
           ),
           if (data.densityError != null) ...[
             const SizedBox(height: AppDimens.s),
-            Text(
-              data.densityError ?? '',
-              style: AppTypography.small.copyWith(color: AppColors.red),
+            Padding(
+              padding: const EdgeInsets.only(left: AppDimens.m),
+              child: Text(
+                data.densityError ?? '',
+                style: AppTypography.medium.copyWith(color: AppColors.red),
+              ),
             )
           ]
         ],
