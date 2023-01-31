@@ -39,31 +39,31 @@
       "content_p2": "Oferujemy szeroki asortyment towarów zarówno w I (atestowanym) jak i II gatunku, dzięki czemu możemy zaproponować najkorzystniejsze rozwiązania, dostosowując się do potrzeb naszych kontrahentów. Umożliwiamy negocjowanie cen, co sprawia, że oferta jest zawsze atrakcyjna oraz na miarę. Wynosimy handel hurtowy i detaliczny wyrobów hutniczych na nowy, wyższy poziom. Warto poznać wszystkie nasze produkty."
     }
   },
-  "calculator_page" : {
-    "calculator_section" : {
+  "calculator_page": {
+    "calculator_section": {
       "header": "Kalkulator masy",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis nunc eu mauris hendrerit lobortis. Pellentesque volutpat nulla ac arcu aliquet, et lacinia erat consectetur. Vivamus faucibus, odio quis scelerisque mattis",
-      "density" : "Gęstość",
-      "width" : "Szerokość",
-      "thickness" : "Grubość",
-      "mass" : "Masa",
-      "calculate" : "Oblicz",
+      "density": "Gęstość",
+      "width": "Szerokość",
+      "thickness": "Grubość",
+      "mass": "Masa",
+      "calculate": "Oblicz",
       "noValueError": "Wpisz poprawną wartość",
       "noSelectedDensityError": "Wybierz jedną wartość gęstości"
     }
   },
-  "footer" : {
-    "menu" : "Menu",
-    "office" : "Biuro",
-    "workingHours" : "Czynne: pon-pt, 8:00 - 16:00",
+  "footer": {
+    "menu": "Menu",
+    "office": "Biuro",
+    "workingHours": "Czynne: pon-pt, 8:00 - 16:00",
     "contact": "Kontakt"
   },
   "contact_page": {
     "h1": "Kontakt",
-    "content_p1" : "W celu dokonania zamówienia lub zapytania o towar zapraszamy do kontaktu telefonicznego oraz mailowego.",
-    "phone" : "Telefon:",
-    "email" : "E-mail:",
-    "address" : "Adres"
+    "content_p1": "W celu dokonania zamówienia lub zapytania o towar zapraszamy do kontaktu telefonicznego oraz mailowego.",
+    "phone": "Telefon:",
+    "email": "E-mail:",
+    "address": "Adres"
   },
   "metal_sheet": {
     "hot_rolled": {
@@ -89,6 +89,19 @@
         "header": "Tworzenie blachy gorącowalcowanej",
         "description": "Proces walcowania na gorąco odbywa się powyżej temperatury rekrystalizacji stali. Końcowy produkt powstaje w krótszym czasie niż blachy zimnowalcowane, dzięki czemu jest znacznie tańszy. Wadą tego typu obróbki może być powstanie zgorzeliny w wyniku utleniania stopu metali. Należy ją potem usunąć np. przez wytrawienie lub inną metodę. Oferujemy Państwu doskonałe towary na wymiar. Jeszcze niedawno blachy gorącowalcowane mogły mieć nie mniej niż 3 mm, jednak dzięki rozwojowi technologicznemu dostępne są też takie o grubości nawet poniżej 1,2 mm."
       }
+    },
+    "galvanized": {
+      "location_section": {
+        "header": "Blacha ocynkowana Katowice i Śląsk",
+        "description": "W naszej ofercie znajdziecie Państwo najlepszej jakości materiały hutnicze, w tym blachy ocynkowane. Zajmujemy się ich sprzedażą m.in. na Śląsku (siedzibą firmy są Katowice), a także w województwach ościennych. Jesteśmy otwarci na negocjacje i chętnie podejmiemy współpracę z Klientami z innych regionów. Zapraszamy do zakupów na naszym portalu oraz skorzystania z profesjonalnych usług cięcia materiałów na wymiar."
+      },
+      "quality_section": {
+        "header": "Najlepsza blacha ocynkowana na Śląsku",
+        "description": "Dołożyliśmy wszelkich starań, by materiały były najwyższej jakości. Czym charakteryzuje się nasza blacha ocynkowana? Dzięki zastosowaniu nowoczesnej technologii produkcji wszystkie ze sprzedawanych przez nas produktów mają właściwości antykorozyjne, są wytrzymałe na wysoką i niską temperaturę lub wilgoć. Mogą być wykorzystywane zarówno wewnątrz, jak i na zewnątrz budynków. Obojętny dla nich jest kontakt z wodą, dlatego są odporne na deszcz i śnieg oraz uszkodzenia mechaniczne, jak zadrapania. W zależności od grubości ocynku mają różne przeznaczenie. Blachy ocynkowane z grubym zabezpieczeniem świetnie sprawdzą się w konstrukcjach narażonych na zniszczenia czy ekstremalne warunki atmosferyczne. Każda oferowana blacha jest docinana na wymiar wymagany przez Klienta."
+      },
+      "production_section": {
+        "header": "Jak powstaje blacha ocynkowana?",
+        "description": "Na początku pokrywa się ją cynkiem, tworzącym szczelną warstwę na całej powierzchni blachy ocynkowanej. Następnie docina się do wymiaru, zamówionego przez Klienta. Wyróżniamy cynkowanie ogniowe, natryskowe, galwaniczne oraz tzw. protokół Sendzimira. Bardzo popularna i skuteczna ogniowa obróbka polega na nakładaniu powłoki w wysokiej temperaturze, ok. 450 stopni Celsjusza, co przyspiesza zachodzenie reakcji pomiędzy stalą a cynkiem. Materiał jest wcześniej dokładnie przygotowywany. Zostaje oczyszczony z tłuszczu, rdzy i wszystkich innych zabrudzeń. Każdy płat pokrywany jest z dwóch stron jednocześnie.\n\nPolecamy nasze produkty, a także serwis cięcia na wymiar blach ocynkowanych. Obsługujemy głównie Śląsk, jednak chętnie podejmiemy rozmowy biznesowe z firmami i Klientami indywidualnymi z całego kraju."   }
     }
   }
 }
