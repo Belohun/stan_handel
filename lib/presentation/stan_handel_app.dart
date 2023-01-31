@@ -4,7 +4,8 @@ import 'package:flutter_portal/flutter_portal.dart';
 import 'package:stan_handel_web/presentation/page/calculator/calculator_page.dart';
 import 'package:stan_handel_web/presentation/page/contact/contact_page.dart';
 import 'package:stan_handel_web/presentation/page/home/home_page.dart';
-import 'package:stan_handel_web/presentation/page/hot_rolled_metal/hot_rolled_metal.dart';
+import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/galvanized/galvanized_metal.dart';
+import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/hot_rolled_metal/hot_rolled_metal.dart';
 import 'package:stan_handel_web/presentation/style/app_themes.dart';
 
 class StanHandelApp extends StatelessWidget {
@@ -23,7 +24,8 @@ class StanHandelApp extends StatelessWidget {
           HomePage.route: (context) => const HomePage(),
           CalculatorPage.route: (context) => const CalculatorPage(),
           ContactPage.route: (context) => const ContactPage(),
-          HotRolledMetal.route: (context) => const HotRolledMetal(),
+          HotRolledMetalPage.route: (context) => const HotRolledMetalPage(),
+          GalvanizedMetalPage.route: (context) => const GalvanizedMetalPage(),
         },
       ),
     );
