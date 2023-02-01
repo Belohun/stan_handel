@@ -74,6 +74,7 @@ class _TextSectionBig extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SeoText(
                           header,
@@ -130,7 +131,6 @@ class _TextSectionSmall extends StatelessWidget {
       color: background,
       width: double.infinity,
       constraints: BoxConstraints(minHeight: context.contentHeight),
-
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -139,6 +139,7 @@ class _TextSectionSmall extends StatelessWidget {
             child: SizedBox(
               width: context.contentWidth,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (imagePath != null) ...[
                     Image(

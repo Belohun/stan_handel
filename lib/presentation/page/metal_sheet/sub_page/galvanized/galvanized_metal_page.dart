@@ -48,6 +48,7 @@ class _Content extends StatelessWidget {
           header: LocaleKeys.metal_sheet_galvanized_production_section_header.tr(),
           content: LocaleKeys.metal_sheet_galvanized_production_section_description.tr(),
           background: AppColors.primaryLight,
+          imagePath: Images.metalSheetProduction,
           reversed: true,
         ),
       ],

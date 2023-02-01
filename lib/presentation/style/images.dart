@@ -24,4 +24,14 @@ class Images {
   static const localization = "${path}localization.png";
 
   static const quality = "${path}quality.png";
+
+  static const metalSheets = "${path}metal_sheets.png";
+
+  static const metalSheetProduction = "${path}metal_sheet_production.png";
+
+  static const metalSheetCheckerPlate= "${path}checker_plate_metal_sheet.png";
+
+  static const metalSheetColdRolled= "${path}cold_rolled_metal_sheet.png";
+
+  static const questionMark = "${path}question_mark.png";
 }

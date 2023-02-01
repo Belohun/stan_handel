@@ -89,7 +89,7 @@ class _LocationSection extends StatelessWidget {
       header: LocaleKeys.metal_sheet_hot_rolled_location_section_header.tr(),
       content: LocaleKeys.metal_sheet_hot_rolled_location_section_description.tr(),
       background: AppColors.primaryLight,
-      imagePath: Images.localization,
+      imagePath: Images.metalSheets,
     );
   }
 }

@@ -68,8 +68,8 @@
   "metal_sheet": {
     "hot_rolled": {
       "location_section": {
-        "header": "Blacha ocynkowana Katowice i Śląsk",
-        "description": "W naszej ofercie znajdziecie Państwo najlepszej jakości materiały hutnicze, w tym blachy ocynkowane. Zajmujemy się ich sprzedażą m.in. na Śląsku (siedzibą firmy są Katowice), a także w województwach ościennych. Jesteśmy otwarci na negocjacje i chętnie podejmiemy współpracę z Klientami z innych regionów. Zapraszamy do zakupów na naszym portalu oraz skorzystania z profesjonalnych usług cięcia materiałów na wymiar."
+        "header": "Blachy gorącowalcowane",
+        "description": "Oferujemy blachy gorącowalcowane, które są idealne do dużych konstrukcji. Gdy liczy się grubość, jakość oraz łatwość spawania i przerabiana właśnie ten rodzaj materiału będzie najlepszym rozwiązaniem. U nas nabędą Państwo produkty na wymiar hurtowo, jak i detalicznie. Zapraszamy do zapoznania się z asortymentem!"
       },
       "quality_section": {
         "header": "Najwyższa jakość i doświadczenie",
@@ -92,8 +92,8 @@
     },
     "galvanized": {
       "location_section": {
-        "header": "Blacha ocynkowana Katowice i Śląsk",
-        "description": "W naszej ofercie znajdziecie Państwo najlepszej jakości materiały hutnicze, w tym blachy ocynkowane. Zajmujemy się ich sprzedażą m.in. na Śląsku (siedzibą firmy są Katowice), a także w województwach ościennych. Jesteśmy otwarci na negocjacje i chętnie podejmiemy współpracę z Klientami z innych regionów. Zapraszamy do zakupów na naszym portalu oraz skorzystania z profesjonalnych usług cięcia materiałów na wymiar."
+        "header": "Blacha ocynkowana Tychy i Śląsk",
+        "description": "W naszej ofercie znajdziecie Państwo najlepszej jakości materiały hutnicze, w tym blachy ocynkowane. Zajmujemy się ich sprzedażą m.in. na Śląsku (siedzibą firmy są Tychy), a także w województwach ościennych. Jesteśmy otwarci na negocjacje i chętnie podejmiemy współpracę z Klientami z innych regionów. Zapraszamy do zakupów na naszym portalu oraz skorzystania z profesjonalnych usług cięcia materiałów na wymiar."
       },
       "quality_section": {
         "header": "Najlepsza blacha ocynkowana na Śląsku",
@@ -101,7 +101,44 @@
       },
       "production_section": {
         "header": "Jak powstaje blacha ocynkowana?",
-        "description": "Na początku pokrywa się ją cynkiem, tworzącym szczelną warstwę na całej powierzchni blachy ocynkowanej. Następnie docina się do wymiaru, zamówionego przez Klienta. Wyróżniamy cynkowanie ogniowe, natryskowe, galwaniczne oraz tzw. protokół Sendzimira. Bardzo popularna i skuteczna ogniowa obróbka polega na nakładaniu powłoki w wysokiej temperaturze, ok. 450 stopni Celsjusza, co przyspiesza zachodzenie reakcji pomiędzy stalą a cynkiem. Materiał jest wcześniej dokładnie przygotowywany. Zostaje oczyszczony z tłuszczu, rdzy i wszystkich innych zabrudzeń. Każdy płat pokrywany jest z dwóch stron jednocześnie.\n\nPolecamy nasze produkty, a także serwis cięcia na wymiar blach ocynkowanych. Obsługujemy głównie Śląsk, jednak chętnie podejmiemy rozmowy biznesowe z firmami i Klientami indywidualnymi z całego kraju."   }
+        "description": "Na początku pokrywa się ją cynkiem, tworzącym szczelną warstwę na całej powierzchni blachy ocynkowanej. Następnie docina się do wymiaru, zamówionego przez Klienta. Wyróżniamy cynkowanie ogniowe, natryskowe, galwaniczne oraz tzw. protokół Sendzimira. Bardzo popularna i skuteczna ogniowa obróbka polega na nakładaniu powłoki w wysokiej temperaturze, ok. 450 stopni Celsjusza, co przyspiesza zachodzenie reakcji pomiędzy stalą a cynkiem. Materiał jest wcześniej dokładnie przygotowywany. Zostaje oczyszczony z tłuszczu, rdzy i wszystkich innych zabrudzeń. Każdy płat pokrywany jest z dwóch stron jednocześnie.\n\nPolecamy nasze produkty, a także serwis cięcia na wymiar blach ocynkowanych. Obsługujemy głównie Śląsk, jednak chętnie podejmiemy rozmowy biznesowe z firmami i Klientami indywidualnymi z całego kraju."
+      }
+    },
+    "checker_plate": {
+      "description_section": {
+        "header": "Blachy ryflowane",
+        "description": "Oferujemy najlepszej jakości wyroby metalurgiczne, wśród których znajdziecie Państwo różne rodzaje blachy ryflowanej. Polecamy również usługi z zakresu cięcia tego materiału na wymiar. Dostosowujemy się do indywidualnych wymagań naszych Klientów. Obsługujemy głównie Śląsk, jednak chętnie nawiążemy współpracę z Klientami z innych województw. Zajmujemy się sprzedażą hurtową i detaliczną. Działamy szybko, skutecznie i jesteśmy gotowi na negocjacje."
+      },
+      "usage_section": {
+        "header": "Zastosowanie blachy ryflowanej",
+        "description": "Dostępna na naszej platformie w formie aluminiowych arkuszy, blacha ryflowana, którą możemy dociąć na wymagany przez Państwa wymiar, wykorzystywana jest w transporcie i różnych gałęziach przemysłu. Wytłaczana jest w wypukłe wzory, zwane ryflami, o wysokości ok.1,5 mm. Dzięki wyprofilowanej powierzchni ma właściwości antypoślizgowe, dlatego używana jest dziś chętnie np. przez producentów schodów. Stosowana jest również przy aranżacji nowoczesnych wnętrz w stylu industrialnym. Architekci coraz częściej wykorzystują jej dekoracyjne wzory wypustek."
+      },
+      "quality_section": {
+        "header": "Najlepszej jakości blacha ryflowana w Tychach",
+        "description": "Polecane przez nas blachy ryflowane mają właściwości antykorozyjne, dlatego z powodzeniem możecie je Państwo wykorzystać w różnego rodzaju konstrukcjach zewnętrznych. Ponieważ wyprodukowane są z aluminium o wysokiej wytrzymałości na warunki atmosferyczne czy uszkodzenia mechaniczne, mogą być stosowane w budownictwie. Plastyczność produktów ułatwia ich obróbkę, np. wyginanie w odpowiednie kształty. Mają naturalną powłokę ochronną, odporną nawet na działanie lekkich kwasów. Powstałe niewielkie uszkodzenia, jak zadrapania, samoczynnie zasklepiają się dzięki warstwie tlenku, powstającego w kontakcie z powietrzem. Dlatego będą służyły przez wiele lat i nie stracą swoich właściwości estetycznych.\n\nJeśli szukacie Państwo najlepszej gatunkowo i taniej blachy ryflowanej, zachęcamy do sprawdzenia naszej oferty. Obsłużymy natychmiastowo i profesjonalnie Klientów ze Śląska i innych województw."
+      }
+    },
+    "cold_rolled": {
+      "description_section": {
+        "header": "Blachy zimnowalcowane",
+        "description": "U nas kupią Państwo blachy zimnowalcowane na wymiar, które sprawdzą się w wielu zastosowaniach. Materiały tego typu można użyć wszędzie tam, gdzie potrzebna jest twardość i wytrzymałość. Produkt ma doskonałe właściwości mechaniczne, jest bardzo plastyczny i odporny na rozciąganie. Zachęcamy do zakupu już teraz!"
+      },
+      "usage_section": {
+        "header": "Gdzie można zastosować blachę zimnowalcowaną?",
+        "description_p1": "Określone zadania potrzebują specjalnych tworzyw, które będą zapewniać odpowiednie parametry końcowych konstrukcji. Blacha zimnowalcowana wyróżnia się wysoką trwałością, więc gdy konieczny jest specjalnie umocniony materiał, to stanowi ona najlepszy wybór. Inna zaleta to równomierna struktura, która podnosi walory estetyczne. Produkt jest cienki, można go rozciągać i poddawać różnym zmianom. Wszystkie wymienione cechy sprawiają, że jest wykorzystywany m.in. w:",
+        "description_p2": "Niezależnie od potrzeb warto sprawdzić naszą ofertę w tym zakresie.",
+        "car_industry": "przemyśle samochodowym",
+        "household_goods": "produkcji AGD",
+        "electronic_equipment": "sprzętach elektrotechnicznych"
+      },
+      "production_section": {
+        "header": "Produkcja blachy zimnowalcowanej",
+        "description": "Warto wiedzieć, że materiały gorącowalcowane są podstawą do wytworzenia blachy zimnowalcowanej. Te pierwsze ponownie się walcuje i poddaje procesowi żarzenia rekrystalizującego. Dzieje się to w temperaturze niższej od tej potrzebnej do mięknięcia metalu. Efektem tych przemian jest cienkie, odporne tworzywo, które sprawdzi się tam, gdzie potrzebna jest precyzja w produkcji. Powierzchnię takich blach można wykończyć na gładko w procesie szlifowania i polerowania, co nada im doskonały wygląd."
+      },
+      "quality_section": {
+        "header": "Wybierz najwyższą jakość i doświadczenie",
+        "description": "Jeśli poszukują Państwo najwyższej jakości, polecamy nasze produkty. Oferowana blacha zimnowalcowana na wymiar spełni oczekiwania najbardziej wymagających Klientów. Jesteśmy elastyczni i dopasowujemy rozwiązania do wszelkich potrzeb. Ogromne doświadczenie sprawia, że wyróżniamy się profesjonalną i szybką obsługą. Proponujemy asortyment I gatunku z atestem i II gatunku bez niego. Wszystko w atrakcyjnych cenach z możliwością negocjacji. Zapraszamy do satysfakcjonujących zakupów!"
+      }
     }
   }
 }
