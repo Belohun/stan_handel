@@ -1,7 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:stan_handel_web/generated/local_keys.g.dart';
-import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/galvanized/galvanized_metal.dart';
-import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/hot_rolled_metal/hot_rolled_metal.dart';
+import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/checker_plate/checker_plate_metal_page.dart';
+import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/cold_rolled/cold_rolled_metal_page.dart';
+import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/galvanized/galvanized_metal_page.dart';
+import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/hot_rolled_metal/hot_rolled_metal_page.dart';
 
 abstract class TabMenuEnumBase {
   String get route;
@@ -39,11 +41,11 @@ enum TabMenuSheetMetal with TabMenuEnumBase {
     LocaleKeys.home_page_navigation_sub_menu_sheet_metal_galvanized,
   ),
   checkerPlate(
-    "", //TODO
+    CheckedPlateMetalPage.route,
     LocaleKeys.home_page_navigation_sub_menu_sheet_metal_checkerPlate,
   ),
   coldRolled(
-    "", //TODO
+    ColdRolledMetalPage.route,
     LocaleKeys.home_page_navigation_sub_menu_sheet_metal_coldRolled,
   );
 
