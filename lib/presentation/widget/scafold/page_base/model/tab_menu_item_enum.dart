@@ -4,6 +4,9 @@ import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/checker_p
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/cold_rolled/cold_rolled_metal_page.dart';
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/galvanized/galvanized_metal_page.dart';
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/hot_rolled_metal/hot_rolled_metal_page.dart';
+import 'package:stan_handel_web/presentation/page/pipes/sub_page/seamed/seamed_pipes_page.dart';
+import 'package:stan_handel_web/presentation/page/pipes/sub_page/seamless/seamless_pipes_page.dart';
+import 'package:stan_handel_web/presentation/page/pipes/sub_page/steel/steel_pipes_page.dart';
 
 abstract class TabMenuEnumBase {
   String get route;
@@ -11,13 +14,13 @@ abstract class TabMenuEnumBase {
   String get name;
 }
 
-enum TabMenuRods with TabMenuEnumBase {
-  round(
+enum TabMenuSections with TabMenuEnumBase {
+  hotRolled(
     '', //TODO
-    LocaleKeys.home_page_navigation_sub_menu_rods_round,
+    LocaleKeys.home_page_navigation_sub_menu_sections_hotRolled,
   );
 
-  const TabMenuRods(
+  const TabMenuSections(
     this.route,
     this._key,
   );
@@ -65,18 +68,15 @@ enum TabMenuSheetMetal with TabMenuEnumBase {
 
 enum TabMenuPipes with TabMenuEnumBase {
   steel(
-    '', //TODO
-
+    SteelPipesPage.route,
     LocaleKeys.home_page_navigation_sub_menu_pipes_steel,
   ),
   seamless(
-    '', //TODO
-
+    SeamlessPipesPage.route,
     LocaleKeys.home_page_navigation_sub_menu_pipes_seamless,
   ),
   seamed(
-    '', //TODO
-
+    SeamedPipesPage.route,
     LocaleKeys.home_page_navigation_sub_menu_pipes_seamed,
   );
 

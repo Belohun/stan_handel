@@ -33,7 +33,7 @@ class _Content extends StatelessWidget {
     return Column(
       children: [
         TextSection(
-          background: AppColors.primaryLight,
+          color: AppColors.primaryLight,
           header: LocaleKeys.metal_sheet_checker_plate_description_section_header.tr(),
           content: LocaleKeys.metal_sheet_checker_plate_description_section_description.tr(),
           imagePath: Images.metalSheetCheckerPlate,
@@ -44,7 +44,7 @@ class _Content extends StatelessWidget {
           reversed: true,
         ),
         TextSection(
-          background: AppColors.gray7,
+          color: AppColors.gray7,
           header: LocaleKeys.metal_sheet_checker_plate_quality_section_header.tr(),
           content: LocaleKeys.metal_sheet_checker_plate_quality_section_description.tr(),
         )

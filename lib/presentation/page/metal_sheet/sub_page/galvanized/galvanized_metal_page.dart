@@ -35,8 +35,8 @@ class _Content extends StatelessWidget {
         TextSection(
           header: LocaleKeys.metal_sheet_galvanized_location_section_header.tr(),
           content: LocaleKeys.metal_sheet_galvanized_location_section_description.tr(),
-          background: AppColors.gray7,
-          imagePath: Images.localization,
+          color: AppColors.gray7,
+          imagePath: Images.galvanizedMetalSheets,
           reversed: true,
         ),
         TextSection(
@@ -47,7 +47,7 @@ class _Content extends StatelessWidget {
         TextSection(
           header: LocaleKeys.metal_sheet_galvanized_production_section_header.tr(),
           content: LocaleKeys.metal_sheet_galvanized_production_section_description.tr(),
-          background: AppColors.primaryLight,
+          color: AppColors.primaryLight,
           imagePath: Images.metalSheetProduction,
           reversed: true,
         ),

@@ -2,20 +2,22 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:stan_handel_web/generated/local_keys.g.dart';
 import 'package:stan_handel_web/presentation/page/calculator/calculator_page.dart';
 import 'package:stan_handel_web/presentation/page/contact/contact_page.dart';
+import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/hot_rolled_metal/hot_rolled_metal_page.dart';
+import 'package:stan_handel_web/presentation/page/pipes/sub_page/steel/steel_pipes_page.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/model/tab_menu_item_enum.dart';
 
 enum HomePageTabEnum {
   sheetMetal(
     LocaleKeys.home_page_navigation_sheet_metal,
-    '',
+    HotRolledMetalPage.route,
   ),
-  rods(
-    LocaleKeys.home_page_navigation_rods,
-    '',
+  sections(
+    LocaleKeys.home_page_navigation_sections,
+    "",
   ),
   pipes(
     LocaleKeys.home_page_navigation_pipes,
-    '',
+    SteelPipesPage.route,
   ),
   other(
     LocaleKeys.home_page_navigation_rest,
@@ -41,8 +43,8 @@ enum HomePageTabEnum {
     switch (this) {
       case HomePageTabEnum.sheetMetal:
         return TabMenuSheetMetal.values;
-      case HomePageTabEnum.rods:
-        return TabMenuRods.values;
+      case HomePageTabEnum.sections:
+        return TabMenuSections.values;
       case HomePageTabEnum.pipes:
         return TabMenuPipes.values;
       case HomePageTabEnum.other:
