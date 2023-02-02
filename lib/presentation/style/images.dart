@@ -29,9 +29,23 @@ class Images {
 
   static const metalSheetProduction = "${path}metal_sheet_production.png";
 
-  static const metalSheetCheckerPlate= "${path}checker_plate_metal_sheet.png";
+  static const metalSheetCheckerPlate = "${path}checker_plate_metal_sheet.png";
 
-  static const metalSheetColdRolled= "${path}cold_rolled_metal_sheet.png";
+  static const metalSheetColdRolled = "${path}cold_rolled_metal_sheet.png";
+
+  static const galvanizedMetalSheets = "${path}galvanized_metal_sheet.png";
 
   static const questionMark = "${path}question_mark.png";
+
+  static const steelPipes = "${path}steel_pipes.png";
+
+  static const usage = "${path}usage.png";
+
+  static const seamlessPipes = "${path}seamless_pipes.png";
+
+  static const production = "${path}production.png";
+
+  static const seamedPipe = "${path}seamed_pipe.png";
+
+  static const productionAlternative = "${path}production_alternative.png";
 }

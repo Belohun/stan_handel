@@ -2,7 +2,7 @@
   "home_page": {
     "navigation": {
       "sheet_metal": "Sheet metal",
-      "rods": "Rods",
+      "sections": "Sections",
       "pipes": "Pipes",
       "contact": "Contact",
       "rest": "Other",
@@ -14,8 +14,8 @@
           "checkerPlate": "Checker plate metal sheet",
           "coldRolled": "Cold rolled metal sheet"
         },
-        "rods": {
-          "round": "Round rods"
+        "sections": {
+          "hotRolled": "Hot rolled"
         },
         "pipes": {
           "steel": "Steel pipes",
@@ -138,6 +138,76 @@
       "quality_section": {
         "header": "Wybierz najwyższą jakość i doświadczenie",
         "description": "Jeśli poszukują Państwo najwyższej jakości, polecamy nasze produkty. Oferowana blacha zimnowalcowana na wymiar spełni oczekiwania najbardziej wymagających Klientów. Jesteśmy elastyczni i dopasowujemy rozwiązania do wszelkich potrzeb. Ogromne doświadczenie sprawia, że wyróżniamy się profesjonalną i szybką obsługą. Proponujemy asortyment I gatunku z atestem i II gatunku bez niego. Wszystko w atrakcyjnych cenach z możliwością negocjacji. Zapraszamy do satysfakcjonujących zakupów!"
+      }
+    }
+  },
+  "pipes": {
+    "steel": {
+      "location_section": {
+        "header": "Stalowe rury - Katowice i okolice",
+        "content": "Oferujemy wysokiej klasy rury stalowe, które znajdą zastosowanie w wielu dziedzinach budownictwa. Są doskonałe również w przemyśle. Takie produkty wyróżniają się znakomitą odpornością na warunki atmosferyczne oraz doskonałą ceną. Jesteśmy firmą realizującą zamówienia na terenie Śląska, ale także innych rejonów Polski. Zachęcamy do zapoznania się z ofertą!"
+      },
+      "usage_section": {
+        "header": "Rury stalowe - rodzaje i zastosowania",
+        "content": "Zawsze należy dobrać optymalne rozwiązanie do wymogów projektu. Dlatego warto wiedzieć, że wyróżniamy rury ocynkowane i ze stali czarnej. Te pierwsze znajdują zastosowanie np. w instalacjach wodnych. Drugi typ jest szeroko wykorzystywany w wielu branżach, jak np. chemiczna czy budowlana. Służy do tworzenia sieci przemysłowych, transportu gazu, ciał stałych, a także do produkcji stalowych konstrukcji i urządzeń. Cykl życia takiego elementu jest bardzo długi i wynosi od 50 do 100 lat. U nas odnajdą Państwo najlepsze rozwiązanie tego typu w Katowicach."
+      },
+      "advantages_section": {
+        "header": "Rozwiązania szwowe i bezszwowe",
+        "content": "Oferowane rury ze stali czarnej dzielą się na te ze szwem i bez szwu. Pierwsze wymienione produkuje się w procesie zgrzewania taśm oraz arkuszy blachy. Dzięki temu można wytworzyć rozwiązania o nawet bardzo dużych średnicach. Jest to także produkt atrakcyjny cenowo. Drugi typ nie posiada zgrzewu, a w materiale, z którego powstaje, wycinane są otwory. Niezależenie od wyboru rury stalowe mają wiele zalet:",
+        "temp_resistance": "odporność na wysokie i niskie temperatury",
+        "stretch_resistance": "wytrzymałość mechaniczna na rozciąganie czy zginanie",
+        "tightness": "dobra szczelność",
+        "chemical_resistance": "niepodatność na działanie substancji chemicznych"
+      },
+      "quality_section": {
+        "header": "Najlepszy wybór na Śląsku i nie tylko",
+        "content": "Nasze produkty spełnią oczekiwania nawet najbardziej wymagających Klientów. Doskonałe rury stalowe oferujemy podmiotom z Katowic i innych rejonów kraju. Współpracujemy z dużymi i małymi firmami zarówno w zakresie handlu detalicznego, jak i hurtowego. Polecamy Państwu wybór asortymentu w I gatunku z atestem i w II bez niego. Szczycimy się indywidualnym podejściem do każdego zamówienia, atrakcyjnymi cenami i możliwością negocjacji. Zapraszamy do satysfakcjonujących zakupów!"
+      }
+    },
+    "seamless" : {
+      "description_section" : {
+        "header" : "Rury bezszwowe",
+        "content" : "Zajmujemy się handlem materiałów hutniczych - sprzedajemy m.in. najlepszej jakości, niezawodne i wytrzymałe rury bezszwowe. Polecamy zarówno te z atestem, 1. gatunku, jak i bez niego, w konkurencyjnych cenach. Jesteśmy otwarci na negocjacje, a zamówienia realizujemy natychmiastowo. Chętnie udzielimy niezbędnych informacji, dotyczących wyboru odpowiednich produktów na naszym portalu."
+      },
+      "production_section" : {
+        "header" : "Nowoczesna technologia produkcji rur bezszwowych",
+        "content" : "Wynalezione pod koniec XIX wieku w Niemczech rury bezszwowe są odporne na działanie czynników atmosferycznych, czy powstawanie uszkodzeń mechanicznych. Obecnie wykonywane są metodą tzw. walcowania pielgrzymkowego, polegającą na walcowaniu rur pomiędzy dwoma walcami o osiach wychylonych o pewien kąt. Następnie okrągły materiał obrabiany jest za pomocą obracającego się trzpienia. Dzięki zastosowaniu najnowszej techniki możliwe jest zrezygnowanie z łączenia kilku oddzielnych elementów za pomocą tzw. szwów. Eliminuje to powstawanie słabych punktów w miejscach zgrzewania ogniowego.\n\nOferujemy wszystkie rodzaje rur bezszwowych, zarówno gorącowalcowanych, jak i ciągnionych na zimno, o różnych profilach i wielkościach średnic, które ze względu na przeznaczenie możemy podzielić na:\n",
+        "construction" : "konstrukcyjne",
+        "wired" : "przewodowe",
+        "precise" : "precyzyjne"
+      },
+      "usage_section" : {
+        "header" : "Rury bezszwowe i ich szerokie zastosowanie",
+        "content_p1" : "Dzięki swojej wytrzymałości i szczelności nasze rury bezszwowe używane są do budowania różnego rodzaju instalacji, służących do transportu zarówno cieczy, gazów, jak i ciał stałych. Wykorzystywane są w wielu gałęziach przemysłu, np.:\n",
+        "chemical" : "chemicznym",
+        "airline" :"lotniczym",
+        "automotive" : "motoryzacyjnym",
+        "furniture" : "meblowym",
+        "construction" : "budowlanym",
+        "energy" : "energetycznym",
+        "mining" : "górniczym",
+        "content_p2" : "\nSą ważnym elementem przy budowie m.in.: kotłów, wężownic, rekuperatorów.\nNa naszej stronie znajdą Państwo bogatą ofertę najwyższej jakości, a jednocześnie tanich rur bezszwowych z najlepszych polskich hut, wyprodukowanych zgodnie z obowiązującymi na terenie UE normami.\nPolecamy!"
+      }
+
+    },
+    "seamed": {
+      "description_section": {
+        "header": "Rury ze szwem",
+        "content": "Polecamy nasze wyroby hutnicze i metalurgiczne, wśród których znajdziecie Państwo najlepszej jakości rury ze szwem. W sprzedaży mamy zarówno te z atestem, 1. gatunku, jak i 2. gatunku, w bardzo korzystnych cenach. Ich atutem jest wytrzymałość na niskie i wysokie temperatury, uszkodzenia mechaniczne czy substancje chemiczne. Obsługujemy zamówienia hurtowe i detaliczne. Dostosowujemy się do indywidualnych wymagań Klientów, oferując również profesjonalne usługi cięcia kupowanego u nas materiału."
+      },
+      "production_section": {
+        "header": "Współczesna metoda produkcji rur ze szwem",
+        "content": "Najczęściej wykonywane są one przez zwijanie arkuszy stali, łączonych następnie za pomocą tzw. szwów. Jedną z nowoczesnych technik wytwarzania jest śrubowe skręcanie pasów materiału. W tym przypadku spojenie rury ze szwem łączące poszczególne elementy zostaje owijane wokół niej od strony zewnętrznej, w wyniku czego powstaje szczelny i solidny produkt. Następnie jest ona poddawana walcowaniu w celu uzyskania wymaganej szerokości ścianek. Zgrzewanie wytwarzane może być na zakładkę, styk lub poprzez spawanie elektryczne. Jakość połączeń jest obecnie coraz lepsza. Polecamy nasze rury ze szwem, które zostały wyprodukowane zgodnie z obowiązującymi na terenie UE normami."
+      },
+      "usage_section": {
+        "header": "Rury ze szwem i ich uniwersalne zastosowanie",
+        "content_p1": "Jedną z zalet rur ze szwem jest możliwość ich wszechstronnego użycia, m.in. poprzez możliwość nadawania im różnych średnic. Odgrywają ważną rolę w wielu gałęziach przemysłu, jak:\n",
+        "chemical": "chemicznym",
+        "automotive": "motoryzacyjnym",
+        "construction": "budowlanym",
+        "energy": "energetycznym",
+        "mining": "górniczym",
+        "content_p2": "\nWykorzystywane są m.in. jako rurociągi i przewody, służące do budowy maszyn, kotłów czy wymienników ciepła. Służą do wykonywania instalacji, transportujących ciecz i ciała stałe, np. w oczyszczalniach ścieków, a także do budowy maszyn i urządzeń przemysłowych. Są częstym elementem konstrukcji wykonanych ze stali. Polecamy nasze rury ze szwem, które zostały wyprodukowane zgodnie z obowiązującymi na terenie UE normami. Zachęcamy do zapoznania się z ofertą naszego sklepu i wybrania odpowiednich dla Państwa produktów."
       }
     }
   }

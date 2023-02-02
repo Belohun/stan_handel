@@ -8,6 +8,9 @@ import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/checker_p
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/cold_rolled/cold_rolled_metal_page.dart';
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/galvanized/galvanized_metal_page.dart';
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/hot_rolled_metal/hot_rolled_metal_page.dart';
+import 'package:stan_handel_web/presentation/page/pipes/sub_page/seamed/seamed_pipes_page.dart';
+import 'package:stan_handel_web/presentation/page/pipes/sub_page/seamless/seamless_pipes_page.dart';
+import 'package:stan_handel_web/presentation/page/pipes/sub_page/steel/steel_pipes_page.dart';
 import 'package:stan_handel_web/presentation/style/app_themes.dart';
 
 class StanHandelApp extends StatelessWidget {
@@ -23,13 +26,16 @@ class StanHandelApp extends StatelessWidget {
         locale: context.locale,
         initialRoute: HomePage.route,
         routes: {
-          HomePage.route: (context) => const HomePage(),
-          CalculatorPage.route: (context) => const CalculatorPage(),
-          ContactPage.route: (context) => const ContactPage(),
-          HotRolledMetalPage.route: (context) => const HotRolledMetalPage(),
-          GalvanizedMetalPage.route: (context) => const GalvanizedMetalPage(),
-          CheckedPlateMetalPage.route: (context) => const CheckedPlateMetalPage(),
-          ColdRolledMetalPage.route: (context) => const ColdRolledMetalPage(),
+          HomePage.route: (_) => const HomePage(),
+          CalculatorPage.route: (_) => const CalculatorPage(),
+          ContactPage.route: (_) => const ContactPage(),
+          HotRolledMetalPage.route: (_) => const HotRolledMetalPage(),
+          GalvanizedMetalPage.route: (_) => const GalvanizedMetalPage(),
+          CheckedPlateMetalPage.route: (_) => const CheckedPlateMetalPage(),
+          ColdRolledMetalPage.route: (_) => const ColdRolledMetalPage(),
+          SteelPipesPage.route: (_) => const SteelPipesPage(),
+          SeamlessPipesPage.route: (_) => const SeamlessPipesPage(),
+          SeamedPipesPage.route: (_) => const SeamedPipesPage(),
         },
       ),
     );

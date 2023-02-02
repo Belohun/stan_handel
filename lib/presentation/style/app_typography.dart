@@ -8,7 +8,7 @@ class AppTypography {
   static const appTitle = TextStyle(
     fontFamily: fontFamily,
     fontSize: 50,
-    height: 1.4,
+    height: 1.2,
     fontWeight: FontWeight.w400,
     color: AppColors.darkBlue,
 

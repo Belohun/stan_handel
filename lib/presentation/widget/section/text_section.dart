@@ -8,7 +8,7 @@ class TextSection extends StatelessWidget {
   const TextSection({
     required this.header,
     required this.content,
-    this.background = Colors.white,
+    this.color = Colors.white,
     this.reversed = false,
     this.imagePath,
     super.key,
@@ -16,7 +16,7 @@ class TextSection extends StatelessWidget {
 
   final String header;
   final String content;
-  final Color background;
+  final Color color;
   final String? imagePath;
   final bool reversed;
 
@@ -27,13 +27,13 @@ class TextSection extends StatelessWidget {
           ? _TextSectionSmall(
               header: header,
               content: content,
-              background: background,
+              background: color,
               imagePath: imagePath,
             )
           : _TextSectionBig(
               header: header,
               content: content,
-              background: background,
+              background: color,
               imagePath: imagePath,
               reversed: reversed,
             ),

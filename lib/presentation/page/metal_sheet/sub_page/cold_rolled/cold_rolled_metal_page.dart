@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:stan_handel_web/generated/local_keys.g.dart';
 import 'package:stan_handel_web/presentation/style/app_colors.dart';
 import 'package:stan_handel_web/presentation/style/images.dart';
+import 'package:stan_handel_web/presentation/util/string_utill.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/page_base.dart';
 import 'package:stan_handel_web/presentation/widget/section/text_section.dart';
 
@@ -32,7 +33,7 @@ class _Content extends StatelessWidget {
     return Column(
       children: [
         TextSection(
-          background: AppColors.gray7,
+          color: AppColors.gray7,
           header: LocaleKeys.metal_sheet_cold_rolled_description_section_header.tr(),
           content: LocaleKeys.metal_sheet_cold_rolled_description_section_description.tr(),
           reversed: true,
@@ -40,7 +41,7 @@ class _Content extends StatelessWidget {
         ),
         const _UsageSection(),
         TextSection(
-          background: AppColors.primaryLight,
+          color: AppColors.primaryLight,
           header: LocaleKeys.metal_sheet_cold_rolled_production_section_header.tr(),
           content: LocaleKeys.metal_sheet_cold_rolled_production_section_description.tr(),
           reversed: true,
@@ -79,15 +80,5 @@ String _createDottedListExamples() {
     LocaleKeys.metal_sheet_cold_rolled_usage_section_electronic_equipment.tr(),
   ];
 
-  var combinedString = '\u2022 ${examplesList.first},';
-
-  var index = 1;
-
-  while (index < examplesList.length - 1) {
-    final currentText = examplesList[index];
-    combinedString += '\n\u2022 $currentText,';
-    index++;
-  }
-  combinedString += '\n\u2022 ${examplesList.last}.';
-  return combinedString;
+  return StringUtil.createDottedListString(examplesList);
 }
