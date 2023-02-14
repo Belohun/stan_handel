@@ -8,6 +8,7 @@ import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/checker_p
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/cold_rolled/cold_rolled_metal_page.dart';
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/galvanized/galvanized_metal_page.dart';
 import 'package:stan_handel_web/presentation/page/metal_sheet/sub_page/hot_rolled_metal/hot_rolled_metal_page.dart';
+import 'package:stan_handel_web/presentation/page/other/subpage/angle_bars.dart';
 import 'package:stan_handel_web/presentation/page/pipes/sub_page/seamed/seamed_pipes_page.dart';
 import 'package:stan_handel_web/presentation/page/pipes/sub_page/seamless/seamless_pipes_page.dart';
 import 'package:stan_handel_web/presentation/page/pipes/sub_page/steel/steel_pipes_page.dart';
@@ -36,6 +37,7 @@ class StanHandelApp extends StatelessWidget {
           SteelPipesPage.route: (_) => const SteelPipesPage(),
           SeamlessPipesPage.route: (_) => const SeamlessPipesPage(),
           SeamedPipesPage.route: (_) => const SeamedPipesPage(),
+          AngleBars.route: (_) => const AngleBars(),
         },
       ),
     );
