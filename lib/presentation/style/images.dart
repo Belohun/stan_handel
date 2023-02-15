@@ -48,4 +48,9 @@ class Images {
   static const seamedPipe = "${path}seamed_pipe.png";
 
   static const productionAlternative = "${path}production_alternative.png";
+
+  static const angleBar = "${path}angle_bar.png";
+
+  static const closedProfile = "${path}closed_profile.png";
+
 }
