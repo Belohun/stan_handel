@@ -51,4 +51,6 @@ class Images {
 
   static const angleBar = "${path}angle_bar.png";
 
+  static const closedProfile = "${path}closed_profile.png";
+
 }

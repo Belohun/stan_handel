@@ -40,7 +40,7 @@ class _ContactInfoSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.gray7,
+      color: AppColors.primaryLight,
       child: Center(
         child: context.isScreenSmall ? const _ContactInfoSectionSmall() : const _ContactInfoSectionBig(),
       ),

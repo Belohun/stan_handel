@@ -7,8 +7,8 @@ import 'package:stan_handel_web/presentation/style/images.dart';
 import 'package:stan_handel_web/presentation/widget/scafold/page_base/page_base.dart';
 import 'package:stan_handel_web/presentation/widget/section/text_section.dart';
 
-class AngleBars extends HookWidget {
-  const AngleBars({super.key});
+class AngleBarsPage extends HookWidget {
+  const AngleBarsPage({super.key});
 
   static const route = '/steel-angle-bars';
 
