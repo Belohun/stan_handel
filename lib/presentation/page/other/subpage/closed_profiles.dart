@@ -22,23 +22,23 @@ class ClosedProfilesPage extends HookWidget {
           TextSection(
             header: LocaleKeys.others_closed_profiles_description_section_header.tr(),
             content: LocaleKeys.others_closed_profiles_description_section_content.tr(),
-            reversed: true,
             color: AppColors.primaryLight,
             imagePath: Images.closedProfile,
           ),
           TextSection(
             header: LocaleKeys.others_closed_profiles_usage_section_header.tr(),
             content: LocaleKeys.others_closed_profiles_usage_section_content.tr(),
+            reversed: true,
           ),
           TextSection(
             header: LocaleKeys.others_closed_profiles_explanation_section_header.tr(),
             content: LocaleKeys.others_closed_profiles_explanation_section_content.tr(),
-            reversed: true,
             color: AppColors.gray7,
           ),
           TextSection(
             header: LocaleKeys.others_closed_profiles_buy_section_header.tr(),
             content: LocaleKeys.others_closed_profiles_buy_section_content.tr(),
+            reversed: true,
           ),
         ],
       ),
